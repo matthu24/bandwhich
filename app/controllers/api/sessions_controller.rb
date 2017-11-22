@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
 
   def create
     user = User.find_by_credentials(params[:user][:bandname],params[:user][:password])
@@ -10,6 +10,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    sign_out 
+    sign_out
   end
 end

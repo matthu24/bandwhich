@@ -9,8 +9,8 @@ const App = () => (
   <div>
 
       <Switch>
-        <AuthRoute path = "/signup" component={SignupContainer} />
-        <AuthRoute path="/login" component={LoginContainer} />
+
+        <Route path="/login" component={LoginContainer} />
 
       </Switch>
   </div>

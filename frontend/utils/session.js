@@ -1,3 +1,4 @@
+import React from 'react';
 
 //signup
 export const postUser = (user) => {
@@ -17,7 +18,7 @@ export const postSession = (user) => {
   });
 };
 
-//sign out 
+//sign out
 export const deleteSession = () => {
   return $.ajax({
     url: '/api/session',

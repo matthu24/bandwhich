@@ -19,6 +19,14 @@ class Login extends React.Component {
       this.setState({[field]:e.target.value});
     };
   }
+  render(){
+    return(
+      <h1>Log In</h1>
+    );
+
+  }
 
 
 }
+
+export default Login;
