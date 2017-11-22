@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link, withRouter } from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props) {
@@ -11,7 +11,8 @@ class Login extends React.Component {
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.loggedIn) {
-        this.props.history.push('/');
+        console.log("logged in");
+        this.props.history.push('/home');
       }
     }
 
@@ -47,4 +48,4 @@ class Login extends React.Component {
 
 }
 
-export default Login;
+export default withRouter(Login);
