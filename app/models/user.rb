@@ -1,16 +1,14 @@
 class User < ApplicationRecord
-  validates :bandname, :password_digest, :session_token, presence: true
+  validates :username, :password_digest, :session_token, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
 
     attr_reader :password
 
-    has_many :albums
-    has_many :tracks
 
     after_initialize :ensure_session_token
 
-    def self.find_by_credentials(bandname,password)
-      user = User.find_by(bandname: bandname)
+    def self.find_by_credentials(username,password)
+      user = User.find_by(username: username)
       return nil unless user && user.is_password?(password)
       user
     end
@@ -34,4 +32,4 @@ class User < ApplicationRecord
       self.session_token ||= SecureRandom.urlsafe_base64(16)
     end
 
-  end
+end

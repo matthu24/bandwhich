@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
-  def new
-
+  def index
+    @users = User.all
   end
 
   def create
@@ -8,13 +8,17 @@ class Api::UsersController < ApplicationController
     if @user.save
       sign_in(@user)
     else
-
+      render json: @user.errors.full_messages, status: 401
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def user_params
-  params.require(:user).permit(:bandname,:password)
-end
+    params.require(:user).permit(:username,:password)
+  end
 
 
 end

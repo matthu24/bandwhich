@@ -2,17 +2,19 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
-
-// import PostIndexContainer from './posts/post_index_container';
+import NavBarContainer from './nav_bar/nav_bar_container';
+import { AuthRoute, ProtectedRoute } from '../utils/route_util';
+import Dashboard from './dashboard/dashboard';
 
 const App = () => (
   <div>
 
-      <Switch>
 
-        <Route path="/login" component={LoginContainer} />
+        <Route path="/" component={NavBarContainer}/>
+        <Route exact path = "/" component={Dashboard}/>
+        <AuthRoute path="/login" component={LoginContainer} />
+        <AuthRoute path="/signup" component={SignupContainer}/>
 
-      </Switch>
   </div>
 );
 

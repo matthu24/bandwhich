@@ -7,7 +7,11 @@ const mapDispatchToProps = dispatch => ({
   login: formUser => dispatch(login(formUser))
 });
 
+const mapStateToProps = state => ({
+  loggedIn: Boolean(state.session.currentUser)
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Login);

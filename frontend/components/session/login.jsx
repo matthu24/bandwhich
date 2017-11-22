@@ -4,14 +4,20 @@ import React from 'react';
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {bandname: '',password:''};
+    this.state = {username: '',password:''};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
+    componentWillReceiveProps(nextProps) {
+      if (nextProps.loggedIn) {
+        this.props.history.push('/');
+      }
+    }
 
   handleSubmit(e){
-    // this.props.login
+    e.preventDefault();
+    this.props.login(this.state);
   }
 
   update(field){
@@ -21,7 +27,19 @@ class Login extends React.Component {
   }
   render(){
     return(
-      <h1>Log In</h1>
+      <div>
+
+      <form className="login-form">
+        <h1>Log In</h1>
+        <label htmlFor="username">Username</label>
+        <input type="text" value={this.state.username} onChange={this.update("username")}/>
+        <br/>
+        <label htmlFor="password">Password</label>
+        <input type="password" value={this.state.password} onChange={this.update("password")}/>
+        <br/>
+        <button onClick={this.handleSubmit}>Log in</button>
+    </form>
+      </div>
     );
 
   }
