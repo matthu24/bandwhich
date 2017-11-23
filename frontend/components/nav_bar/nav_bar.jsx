@@ -7,8 +7,10 @@ import { Link } from 'react-router-dom';
 export default ({ currentUser,logout }) =>{
   const navContent = currentUser ? (
     <div>
-      <h3>Hi {currentUser.username}</h3>
-      <button onClick={logout}>log out</button>
+
+
+      <a href="#" onClick={logout}>log out</a>
+      <div>Hi {currentUser.username}</div>
     </div>
   ) : (
     <div>
@@ -21,7 +23,7 @@ export default ({ currentUser,logout }) =>{
     <header className="nav-bar">
       <div>
         {navContent}
-        <img src="Screen Shot 2017-11-18 at 10.48.06 PM.png" alt="Mountain View"/>
+        <img src="../../../docs/Screen Shot 2017-11-18 at 10.48.06 PM.png" alt="Bandwhich"/>
       </div>
     </header>
   );
