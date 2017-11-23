@@ -2,6 +2,6 @@ import React from 'react';
 
 export default () => (
   <div className="welcome">
-    <h1>Welcome to Bandwhich</h1>
+    <h1>Discover</h1>
   </div>
 );

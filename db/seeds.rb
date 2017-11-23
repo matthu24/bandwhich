@@ -6,4 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+Artist.destroy_all
+
 u1 = User.create!(username: "guest", password: "password")
+
+
+a1 = Artist.create!(name: "Matthew Hu", genre: "folk")
+a2 = Artist.create!(name: "Harry Liu", genre: "pop")
+a3 = Artist.create!(name: "Melody Hwang", genre: "gospel")
+
+al1 = Album.create!

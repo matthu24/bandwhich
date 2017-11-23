@@ -12,7 +12,7 @@ class Login extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       // console.log("logged in");
-      this.props.history.push('/splash');
+      this.props.history.push('/artist');
     }
   }
 
@@ -20,6 +20,8 @@ class Login extends React.Component {
     const user = {username: "guest",password:"password"};
     this.props.login(user);
   }
+
+
 
   renderErrors(){
     const errors = this.props.errors ? (
@@ -52,6 +54,7 @@ class Login extends React.Component {
     this.guestUser();
     return null;
   }
+    
     return(
       <div>
 

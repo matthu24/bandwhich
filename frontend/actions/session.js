@@ -3,6 +3,7 @@ import { postUser, deleteSession, postSession } from '../utils/session';
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -15,6 +16,15 @@ const receiveSessionErrors = errors => ({
   errors
 });
 
+//
+const clearErrorAction = errors => ({
+  type: CLEAR_ERRORS,
+  errors: null
+});
+
+export const clearErrors = errors => dispatch => {
+  return dispatch(clearErrorAction(errors))
+};
 
 
 export const signup = formUser => dispatch => {
