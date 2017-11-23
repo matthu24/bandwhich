@@ -8,14 +8,15 @@ import Dashboard from './dashboard/dashboard';
 
 
 //nav bar always shows up
+//use Authroute for login and signup?
 const App = () => (
   <div>
 
 
         <Route path="/" component={NavBarContainer}/>
         <Route exact path = "/" component={Dashboard}/>
-        <AuthRoute path="/login" component={LoginContainer} />
-        <AuthRoute path="/signup" component={SignupContainer}/>
+        <Route path="/login" component={LoginContainer} />
+        <Route path="/signup" component={SignupContainer}/>
 
   </div>
 );
