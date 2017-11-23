@@ -15,14 +15,12 @@
  */
 
 .logo{
-  font-family: 'Indie Flower', cursive;
   font-size: 30px;
-
 }
 html,body,div{
   background-color:#FFFFF0;
   font-size: 18px;
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 input {
@@ -46,10 +44,16 @@ font-size: 16px;
 .nav-bar div{
   background-color: lightgray;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
    align-items: center;
   padding: 15px;
   font-family: 'Spectral SC', serif;
+
+}
+
+.nav-bar {
+
+
 }
 
 .nav-bar div a{
@@ -57,7 +61,7 @@ font-size: 16px;
   padding: 8px;
   color: black;
   text-decoration: none;
-  
+
 }
 
 .nav-bar div a:hover{

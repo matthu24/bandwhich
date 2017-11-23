@@ -14,5 +14,3 @@ u1 = User.create!(username: "guest", password: "password")
 a1 = Artist.create!(name: "Matthew Hu", genre: "folk")
 a2 = Artist.create!(name: "Harry Liu", genre: "pop")
 a3 = Artist.create!(name: "Melody Hwang", genre: "gospel")
-
-al1 = Album.create!
