@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import logo from '../../../docs/Screen Shot 2017-11-18 at 10.48.06 PM.png';// relative path to image
 
-//just need a functional component here
-//if currentUser exists, they are signed in, and need to
-//render a log out button
+//demo user link goes to Demo route /guest
 export default ({ currentUser,logout }) =>{
   const navContent = currentUser ? (
     <div>
@@ -17,13 +16,15 @@ export default ({ currentUser,logout }) =>{
       <Link to='/login'>log in</Link>
 
       <Link to='/signup'>sign up</Link>
+      <Link to='/guest'>Demo user</Link>
     </div>
   );
   return (
     <header className="nav-bar">
       <div>
         {navContent}
-        <img src="../../../docs/Screen Shot 2017-11-18 at 10.48.06 PM.png" alt="Bandwhich"/>
+        <img src="../../../docs/logo.png" alt="Bandwhich"/>
+
       </div>
     </header>
   );

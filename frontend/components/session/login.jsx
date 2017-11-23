@@ -8,12 +8,17 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
+  //redirects the user to the splash page after logging in
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      console.log("logged in");
-      this.props.history.push('/');
+      // console.log("logged in");
+      this.props.history.push('/splash');
     }
+  }
+
+  guestUser(){
+    const user = {username: "guest",password:"password"};
+    this.props.login(user);
   }
 
   renderErrors(){
@@ -42,6 +47,11 @@ class Login extends React.Component {
     };
   }
   render(){
+    if (this.props.location.pathname === '/guest') {
+      console.log(this.props);
+    this.guestUser();
+    return null;
+  }
     return(
       <div>
 
