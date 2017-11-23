@@ -13,6 +13,7 @@ export default ({ currentUser,logout }) =>{
   ) : (
     <div>
       <Link to='/login'>log in</Link>
+
       <Link to='/signup'>sign up</Link>
     </div>
   );
@@ -20,6 +21,7 @@ export default ({ currentUser,logout }) =>{
     <header className="nav-bar">
       <div>
         {navContent}
+        <img src="Screen Shot 2017-11-18 at 10.48.06 PM.png" alt="Mountain View"/>
       </div>
     </header>
   );

@@ -18,10 +18,13 @@
 html,body,div{
   background-color:#FFFFF0;
   font-size: 18px;
+    font-family: sans-serif;
 }
 
 input {
-  padding: 10px 30px;
+  /*padding: 10px 30px;*/
+  width: 200px;
+  height: 25px;
   margin: 7px;
   /*border-radius: 2px;*/
 }
@@ -36,10 +39,24 @@ display: inline-block;
 font-size: 16px;
 }
 
-.nav-bar{
-  background-color: black;
-  margin: 0 auto;
-  font-weight: 24px;
+.nav-bar div{
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.nav-bar div a{
+  
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-bar div a:hover{
+  text-decoration: underline;
 }
 
 .signup-form {
