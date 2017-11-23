@@ -16,7 +16,7 @@ const receiveSessionErrors = errors => ({
   errors
 });
 
-//
+//action to assign errors to null in order to clear
 const clearErrorAction = errors => ({
   type: CLEAR_ERRORS,
   errors: null
