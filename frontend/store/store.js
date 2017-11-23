@@ -6,8 +6,10 @@ import thunk from '../thunk/thunk';
 
 //define configureStore, which creates store and passes in root reducer and apply middleware
 
+
+//need preloadedState for keeping a user logged in if the browser is refreshed 
 const configureStore = (preloadedState = {}) => {
-  return createStore(rootReducer,applyMiddleware(thunk));
+  return createStore(rootReducer,preloadedState,applyMiddleware(thunk));
 };
 
 export default configureStore;

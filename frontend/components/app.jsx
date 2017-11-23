@@ -8,19 +8,22 @@ import Splash from './dashboard/dashboard';
 import Welcome from './welcome/welcome';
 
 
-//nav bar always shows up
-//use Authroute for login and signup?
+//authroute /guest takes you to login container
+//once in login container, if this.props.location.pathname is guest, then guest user is signed in in the render
+//which is automatically executed by the loginContainer
+//once loggedin, component receives new props and is redirected to /splash
 const App = () => (
   <div>
 
 
-        <Route path="/" component={NavBarContainer}/>
-        <Route exact path="/" component={Welcome}/>
-        <ProtectedRoute exact path = "/splash" component={Splash}/>
+      <Route path="/" component={NavBarContainer}/>
         <Switch>
-        <AuthRoute path="/guest" component={LoginContainer} /> 
+        <AuthRoute path="/guest" component={LoginContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer}/>
+
+          <Route exact path="/" component={Welcome}/>
+          <ProtectedRoute exact path = "/splash" component={Splash}/>
         </Switch>
   </div>
 );

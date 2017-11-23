@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import logo from '../../../docs/Screen Shot 2017-11-18 at 10.48.06 PM.png';// relative path to image
-
+// import logo from '../../../docs/logo.jpg';
 //demo user link goes to Demo route /guest
 export default ({ currentUser,logout }) =>{
   const navContent = currentUser ? (
@@ -23,9 +23,12 @@ export default ({ currentUser,logout }) =>{
     <header className="nav-bar">
       <div>
         {navContent}
-        <img src="../../../docs/logo.png" alt="Bandwhich"/>
 
       </div>
     </header>
   );
 };
+// <img src={logo} alt="mountains"/>
+
+
+// <img src="../../../docs/logo.png" alt="Bandwhich"/>
