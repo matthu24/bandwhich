@@ -2,6 +2,7 @@ import { postUser, deleteSession, postSession } from '../utils/session';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
+export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
 const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -9,13 +10,25 @@ const receiveCurrentUser = currentUser => ({
 });
 
 
+const receiveSessionErrors = errors => ({
+  type: RECEIVE_SESSION_ERRORS,
+  errors
+});
+
+
 
 export const signup = formUser => dispatch => {
-  postUser(formUser).then(user => dispatch(receiveCurrentUser(user)));
+  //the user sent back as a response from the ajax request is from the jbuilder json view
+  //it sends back the @user object
+
+  //send ajax request, of postUser, or creating a new user from the user controller #user create
+  postUser(formUser).then(user => dispatch(receiveCurrentUser(user)), err => (
+    dispatch(receiveSessionErrors(err.responseJSON))));
 };
 
 export const login = formUser => dispatch => {
-  postSession(formUser).then(user => dispatch(receiveCurrentUser(user)));
+  postSession(formUser).then(user => dispatch(receiveCurrentUser(user)), err => (
+    dispatch(receiveSessionErrors(err.responseJSON))));
 };
 
 export const logout = () => dispatch => {

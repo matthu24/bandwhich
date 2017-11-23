@@ -6,6 +6,8 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 import Dashboard from './dashboard/dashboard';
 
+
+//nav bar always shows up
 const App = () => (
   <div>
 

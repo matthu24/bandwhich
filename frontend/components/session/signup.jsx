@@ -14,6 +14,16 @@ class Signup extends React.Component {
     }
   }
 
+
+  renderErrors(){
+    return (
+      <ul>{
+        this.props.errors.map((error,i) => (<li key={i}>{error}</li>))
+      }
+      </ul>
+    );
+  }
+
   handleSubmit(e){
     e.preventDefault();
     this.props.signup(this.state);

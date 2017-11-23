@@ -9,12 +9,27 @@ class Login extends React.Component {
   }
 
 
-    componentWillReceiveProps(nextProps) {
-      if (nextProps.loggedIn) {
-        console.log("logged in");
-        this.props.history.push('/home');
-      }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      console.log("logged in");
+      this.props.history.push('/');
     }
+  }
+
+  renderErrors(){
+    const errors = this.props.errors ? (
+      <ul>{
+          this.props.errors.map((error,i) => (<li key={i}>{error}</li>))
+          }
+      </ul>
+    ) : null;
+    return (
+      <div>
+        {errors}
+      </div>
+
+    );
+  }
 
   handleSubmit(e){
     e.preventDefault();
@@ -32,6 +47,7 @@ class Login extends React.Component {
 
       <form className="login-form">
         <h1>Log In</h1>
+
         <label htmlFor="username">Username</label>
         <input type="text" value={this.state.username} onChange={this.update("username")}/>
         <br/>
@@ -39,7 +55,9 @@ class Login extends React.Component {
         <input type="password" value={this.state.password} onChange={this.update("password")}/>
         <br/>
         <button onClick={this.handleSubmit}>Log in</button>
+        {this.renderErrors()}
     </form>
+
       </div>
     );
 
