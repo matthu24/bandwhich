@@ -16,11 +16,17 @@ class Signup extends React.Component {
 
 
   renderErrors(){
-    return (
+    const errors = this.props.errors ? (
       <ul>{
-        this.props.errors.map((error,i) => (<li key={i}>{error}</li>))
-      }
+          this.props.errors.map((error,i) => (<li key={i}>{error}</li>))
+          }
       </ul>
+    ) : null;
+    return (
+      <div>
+        {errors}
+      </div>
+
     );
   }
 
@@ -46,6 +52,7 @@ class Signup extends React.Component {
           <input type="password" value={this.state.password} onChange={this.update("password")}/>
           <br/>
           <button onClick={this.handleSubmit}>Sign up</button>
+          {this.renderErrors()}
         </form>
       </div>
     );
