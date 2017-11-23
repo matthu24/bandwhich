@@ -8,7 +8,6 @@ class NavBar extends React.Component {
 
   //compare current path with new props path
   //if they are different, clear errors by dispatching clear error action
-
   componentWillReceiveProps(nextProps) {
     if (this.props.location.pathname !== nextProps.location.pathname) {
       this.props.clearErrors();
