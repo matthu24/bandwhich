@@ -1,11 +1,6 @@
 import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS,CLEAR_ERRORS } from '../actions/session';
 import merge from 'lodash/merge';
 
-
-const _nullerrors = {
-  errors: []
-};
-
 export default (errors = [], action) =>{
   Object.freeze(errors);
   switch (action.type) {
