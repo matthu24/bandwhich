@@ -24,6 +24,7 @@ const App = () => (
 
         <Route exact path="/" component={Splash}/>
         <ProtectedRoute exact path = "/artist" component={Artist}/>
+        <Route component={LoginContainer}/>
         </Switch>
   </div>
 );

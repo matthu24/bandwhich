@@ -19,6 +19,7 @@ class NavBar extends React.Component {
       <div className="left-nav">
         <a href="#" onClick={this.props.logout}>log out</a>
         <div>Hi {this.props.currentUser.username}</div>
+
       </div>
     ) : (
       <div>
