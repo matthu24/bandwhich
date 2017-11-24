@@ -16,7 +16,7 @@ class NavBar extends React.Component {
 
   render(){
     const navContent = this.props.currentUser ? (
-      <div>
+      <div className="left-nav">
         <a href="#" onClick={this.props.logout}>log out</a>
         <div>Hi {this.props.currentUser.username}</div>
       </div>
@@ -24,15 +24,18 @@ class NavBar extends React.Component {
       <div>
         <Link to='/login'>log in</Link>
         <Link to='/signup'>sign up</Link>
-        <Link to='/guest'>demo user</Link>
-        <div className="logo">Bandwhich</div>
+        <Link to='/guest'>demo login</Link>
+
       </div>
     );
     return (
       <header className="nav-bar">
-        <div>
-          {navContent}
+        <div className="left-nav">
+          <img className='logo' src="http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png"/>
+
         </div>
+        <div className="right-nav">  {navContent}</div>
+
       </header>
     );
   }

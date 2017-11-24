@@ -1,0 +1,82 @@
+// Place all the styles related to the navbar here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav-bar div{
+  /*background-color: lightgray;*/
+  background-color: white;
+  display: flex;
+  /*justify-content: space-between;*/
+   align-items: center;
+  padding: 10px;
+  font-family: 'Spectral SC', serif;
+}
+
+
+.nav-bar div a{
+  padding: 6px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-bar div a:hover{
+  text-decoration: underline;
+}
+
+.logo{
+  width: 200px;
+
+}
+
+.session-errors ul li{
+  color: red;
+}
+
+
+
+.slogan{
+  font-size: 18px;
+  margin:0;
+  // width: 200px;
+}
+
+
+
+.left-nav {
+  display: flex;
+  flex-direction: column;
+
+  margin: 10px;
+  float:left;
+
+
+}
+//
+.right-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px;
+  float:right;
+  font-weight: bold;
+}
+
+.nav-bar {
+
+  height: 105px;
+
+  display: flex;
+  justify-content: space-between;
+
+
+  font-size: 14px;
+}
+
+.alt-signup{
+  margin:15px;
+}
+
+.alt-login{
+  margin:15px;
+}

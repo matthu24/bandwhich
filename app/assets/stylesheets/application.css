@@ -14,83 +14,18 @@
  *= require_self
  */
 
-.logo{
-  font-size: 30px;
+
+body{
+  margin:0;
 }
 html,body,div{
-  background-color:#FFFFF0;
+  /*background-color:#FFFFF0;*/
   font-size: 18px;
   font-family: sans-serif;
 }
 
-input {
-  /*padding: 10px 30px;*/
-  width: 200px;
-  height: 25px;
-  margin: 7px;
-  /*border-radius: 2px;*/
-}
-button{
-  background-color: rgb(0,161,198); /* Green */
-border: none;
-color: white;
-padding: 12px 105px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-}
-
-.nav-bar div{
-  background-color: lightgray;
-  display: flex;
-  /*justify-content: space-between;*/
-   align-items: center;
-  padding: 15px;
-  font-family: 'Spectral SC', serif;
-
-}
-
-.nav-bar {
 
 
-}
-
-.nav-bar div a{
-
-  padding: 8px;
-  color: black;
-  text-decoration: none;
-
-}
-
-.nav-bar div a:hover{
-  text-decoration: underline;
-}
-
-.signup-form {
-  margin: 0 auto;
-  display:flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 30px;
-  list-style: none;
-}
-
-
-.login-form {
-  margin: 0 auto;
-  display:flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 30px;
-
-
-}
 
 li{
   list-style: none;
