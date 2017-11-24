@@ -13,10 +13,10 @@ const receiveArtist = artist => ({
   artist
 })
 
-export const fetchArtists = () => dispatch => {
+export const fetchAllArtists = () => dispatch => {
   return fetchArtists().then(artists => dispatch(receiveArtists(artists)))
 }
 
-export const fetchArtist = id => dispatch => {
+export const fetchSingleArtist = id => dispatch => {
   return fetchArtist(id).then(artist => dispatch(receiveArtist(artist)))
 }
