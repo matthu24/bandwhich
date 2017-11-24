@@ -16,17 +16,15 @@ class NavBar extends React.Component {
 
   render(){
     const navContent = this.props.currentUser ? (
-      <div className="left-nav">
-        <a href="#" onClick={this.props.logout}>log out</a>
+      <div>
+        <div><a href="#" onClick={this.props.logout}>log out</a></div>
         <div>Hi {this.props.currentUser.username}</div>
-
       </div>
     ) : (
       <div>
         <Link to='/login'>log in</Link>
         <Link to='/signup'>sign up</Link>
         <Link to='/guest'>demo login</Link>
-
       </div>
     );
     return (
