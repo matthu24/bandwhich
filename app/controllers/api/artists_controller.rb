@@ -6,7 +6,7 @@ class Api::ArtistsController < ApplicationController
   def create
     @artist = Artist.new(artist_params)
     if @artist.save!
-      render '/api/artists/index'
+      render '/api/artists/show'
     else
       render json: @artist.errors.full_messages
     end
@@ -25,7 +25,7 @@ class Api::ArtistsController < ApplicationController
   end
 
   def artist_params
-    params.require(:artist).permit(:name,:genre)
+    params.require(:artist).permit(:name,:genre,:image_file_name)
   end
 
 end
