@@ -52,10 +52,20 @@ font-size: 16px;
 
 .alt-signup {
   text-decoration: none;
+  font-size: 17px;
 }
 
 .alt-login {
   text-decoration: none;
+  font-size: 17px;
+}
+
+.alt-login:hover{
+  text-decoration: underline;
+}
+
+.alt-signup:hover{
+  text-decoration: underline;
 }
 
 
