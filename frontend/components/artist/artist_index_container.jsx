@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import requestAllArtists 
+import {fetchAllArtists,fetchSingleArtist } from '../../actions/artist';
 
 
 const mapStateToProps = state => ({
-  artists: Object.values()
-})
+  artists: Object.values(state.entities.artists)
+});
 
 const mapDispatchToProps = dispatch => ({
-  requestAllArtists: () => dispatch(requestAllArtists())
-})
+  fetchAllArtists: () => dispatch(fetchAllArtists())
+});
