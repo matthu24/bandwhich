@@ -6,6 +6,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 import Artist from './artist/artist_index_container';
 import Splash from './splash/splash';
+import ArtistShowContainer from './artist/artist_show_container';
 
 
 //authroute /guest takes you to login container
@@ -22,7 +23,9 @@ const App = () => (
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer}/>
         <Route exact path="/" component={Splash}/>
-        <ProtectedRoute exact path = "/artist" component={Artist}/>
+        <ProtectedRoute exact path = "/artists" component={Artist}/>
+        <ProtectedRoute exact path="/artists/:artistId" component={ArtistShowContainer} />
+
         <Route component={LoginContainer}/>
         </Switch>
   </div>

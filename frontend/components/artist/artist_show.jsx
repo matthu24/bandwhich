@@ -1,5 +1,5 @@
 import React from 'react';
-import AlbumShowContainer from './album_show_container';
+// import AlbumShowContainer from './album_show_container';
 import { Link, Route } from 'react-router-dom';
 // export default () => (
 //   <div className="discover">
@@ -25,6 +25,15 @@ class ArtistShow extends React.Component {
 
   render(){
     const artist = this.props.artist;
+    //puts artist's album keys into an array
+    // const albums = Object.keys(this.props.artist.albums);
+    let content;
+    if (artist) {
+      content =
+        <div>
+          {this.props.artist}
+        </div>;
+    }
     return(
       <div>
 
@@ -32,6 +41,13 @@ class ArtistShow extends React.Component {
     );
   }
 }
-
+//
+// <ul className="artist-albums">
+//   {
+//     albums.map(id => (
+//       <li>{id}</li>
+//     ))
+//   }
+// </ul>
 
 export default ArtistShow;
