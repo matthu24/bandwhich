@@ -9,14 +9,31 @@ input {
   margin: 7px;
   /*border-radius: 2px;*/
 }
-button{
+.login-button{
   background-color: rgb(0,161,198); /* Green */
 border: none;
 color: white;
-padding: 12px 120px;
+padding: 12px 122px;
+// width: 100px;
 text-align: center;
 text-decoration: none;
-display: inline-block;
+// display: inline-block;
+font-size: 16px;
+}
+
+button:hover{
+  cursor:pointer;
+}
+
+.signup-button{
+  background-color: rgb(0,161,198); /* Green */
+border: none;
+color: white;
+padding: 12px 117px;
+// width: 100px;
+text-align: center;
+text-decoration: none;
+// display: inline-block;
 font-size: 16px;
 }
 
@@ -33,6 +50,14 @@ font-size: 16px;
   list-style: none;
 }
 
+.alt-signup {
+  text-decoration: none;
+}
+
+.alt-login {
+  text-decoration: none;
+}
+
 
 .login-form {
   margin: 0 auto;
@@ -42,4 +67,12 @@ font-size: 16px;
   justify-content: center;
   align-items: center;
   padding: 60px 11px;
+}
+
+
+.session-errors ul li{
+  color: red;
+  display:flex;
+  justify-content: center;
+  padding-right: 40px;
 }

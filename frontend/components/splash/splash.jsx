@@ -2,8 +2,8 @@ import React from 'react';
 
 export default () => (
   <div className="welcome">
-    <h1>Welcome to Bandwhich</h1>
 
+    <div className = "slogan">Discover amazing new music and directly support the artists who make it.</div>
     <img className='splash-image' src= "https://i.imgur.com/gnamAvV.jpg"/>
   </div>
 );

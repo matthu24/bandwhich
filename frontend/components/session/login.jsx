@@ -71,7 +71,7 @@ class Login extends React.Component {
         </label>
 
         <br/>
-        <button onClick={this.handleSubmit}>Log in</button>
+        <button className="login-button" onClick={this.handleSubmit}>Log in</button>
         <Link to='/signup'className='alt-signup'>Or sign up!</Link>
         <div className="session-errors">{this.renderErrors()}</div>
 

@@ -17,8 +17,9 @@ class NavBar extends React.Component {
   render(){
     const navContent = this.props.currentUser ? (
       <div>
-        <div><a href="#" onClick={this.props.logout}>log out</a></div>
         <div>Hi {this.props.currentUser.username}</div>
+        <div><a href="#" onClick={this.props.logout}>log out</a></div>
+
       </div>
     ) : (
       <div>
