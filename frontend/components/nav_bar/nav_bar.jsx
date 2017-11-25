@@ -19,7 +19,6 @@ class NavBar extends React.Component {
       <div>
         <div>Hi {this.props.currentUser.username}</div>
         <div><a href="#" onClick={this.props.logout}>log out</a></div>
-
       </div>
     ) : (
       <div>
@@ -32,10 +31,8 @@ class NavBar extends React.Component {
       <header className="nav-bar">
         <div className="left-nav">
           <img className='logo' src="http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png"/>
-
         </div>
         <div className="right-nav">  {navContent}</div>
-
       </header>
     );
   }

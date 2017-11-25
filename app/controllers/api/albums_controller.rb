@@ -6,9 +6,9 @@ class Api::AlbumsController < ApplicationController
   def create
     @album = Album.new(album_params)
     if @album.save!
-      render ''
+      render 'api/albums/show'
     else
-
+      render json: @album.errors.full_messages
     end
   end
 
@@ -25,6 +25,6 @@ class Api::AlbumsController < ApplicationController
   end
 
   def album_params
-    params.require(:album).permit(:artist_id,:title,:year)
+    params.require(:album).permit(:artist_id,:title,:year,:image_file_name)
   end
 end
