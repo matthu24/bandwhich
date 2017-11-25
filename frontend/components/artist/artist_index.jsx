@@ -10,11 +10,11 @@ import React from 'react';
 class ArtistIndex extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
   }
 
   componentWillMount(){
-    // this.props.fetchAllArtists();
+
+    this.props.fetchAllArtists();
 
   }
 
@@ -23,14 +23,14 @@ class ArtistIndex extends React.Component {
     return(
       <ul>
         {
-          <h1>ddf</h1>
+          this.props.artists.map(artist => (
+              <li>{artist.name}</li> ))
         }
       </ul>
     );
   }
 }
 //
-// this.props.artists.map(artist => (
-//     <li>{artist.name}</li> ))
+//
 
 export default ArtistIndex;

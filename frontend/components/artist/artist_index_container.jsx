@@ -5,6 +5,8 @@ import ArtistIndex from './artist_index';
 import {values} from 'lodash';
 
 const mapStateToProps = state => ({
+
+
   artists: Object.values(state.entities.artists)
 });
 

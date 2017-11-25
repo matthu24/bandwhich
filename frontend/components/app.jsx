@@ -4,7 +4,7 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
-import Artist from './artist/artist_index';
+import Artist from './artist/artist_index_container';
 import Splash from './splash/splash';
 
 
@@ -21,7 +21,6 @@ const App = () => (
         <AuthRoute path="/guest" component={LoginContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer}/>
-
         <Route exact path="/" component={Splash}/>
         <ProtectedRoute exact path = "/artist" component={Artist}/>
         <Route component={LoginContainer}/>
