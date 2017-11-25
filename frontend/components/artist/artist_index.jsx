@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ArtistIndexItem from './artist_index_item';
 // export default () => (
 //   <div className="discover">
 //     <h1>Discover</h1>
@@ -12,25 +12,23 @@ class ArtistIndex extends React.Component {
     super(props);
   }
 
-  componentWillMount(){
-
+  componentDidMount(){
     this.props.fetchAllArtists();
-
   }
 
   render(){
-
     return(
-      <ul>
-        {
-          this.props.artists.map(artist => (
-              <li>{artist.name}</li> ))
-        }
-      </ul>
+      <div>
+        <ul className="artist-index">
+          {
+            this.props.artists.map((artist,idx) => (
+                <ArtistIndexItem idx = {idx} artist={artist}/> ))
+          }
+        </ul>
+      </div>
     );
   }
 }
-//
-//
+
 
 export default ArtistIndex;

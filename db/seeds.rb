@@ -11,6 +11,6 @@ Artist.destroy_all
 u1 = User.create!(username: "guest", password: "password")
 
 
-a1 = Artist.create!(name: "Matthew Hu", genre: "folk", image_file_name: "https://i.imgur.com/YpAtKSL.jpg" )
+a1 = Artist.create!(name: "Matthew Hu", genre: "folk", image_file_name: "https://i.imgur.com/SD87Luu.jpg" )
 a2 = Artist.create!(name: "Harry Liu", genre: "pop", image_file_name:"https://i.imgur.com/ha2cGju.jpg")
 a3 = Artist.create!(name: "Melody Hwang", genre: "gospel", image_file_name: "https://i.imgur.com/mMm2gJ8.jpg" )
