@@ -7,10 +7,8 @@ const TrackShowItems = props => {
 
     <li>
       <div className = "tracks-show">
-        <div>{props.track.title}</div>
-
+        {props.track.title}
       </div>
-
     </li>
   );
 };

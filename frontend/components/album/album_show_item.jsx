@@ -8,6 +8,7 @@ const AlbumShowItem = props => {
     <li>
       <div className = "album-show">
         <h2>{props.album.title}</h2>
+        <p>by {props.artist.name}</p>
         <img className='album-image' src= {albumImage}/>
       </div>
 
