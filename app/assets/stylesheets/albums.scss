@@ -2,17 +2,78 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.column {
+  float: left;
+  box-sizing: border-box;
+}
+/* Attribute selector targeting all elements
+with a class attribute containing 'col-' */
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.col-1-8{
+  width: 12.5%;
+}
+
+.col-2-5{
+  width: 40%;
+  // padding-top: 40px;
+}
+.col-1-2{
+  width: 50%;
+}
+
+// .album-show{
+//   display:flex;
+//
+// }
 
 .album-image{
-  width: 280px;
-  height: 250px;
+  width: 350px;
+  height: 320px;
 }
 
-.album-index{
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
+.song-titles{
+  padding: 10px;
 }
+
+.footnote1{
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.footnote2{
+  font-size: 14px;
+}
+
+
+.row{
+  background-color: beige;
+  padding-bottom: 65px;
+  padding-top: 30px;
+  padding-left: 90px;
+  }
+
+  .track-list{
+    padding-left: 80px;
+  }
+
+
+
+
+
+
+
+// .album-index{
+//   display:flex;
+//   justify-content: space-around;
+//   align-items: center;
+// }
 
 // .tracks-show{
 //   display:flex;

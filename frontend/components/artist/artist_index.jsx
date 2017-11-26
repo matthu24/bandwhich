@@ -6,7 +6,6 @@ import ArtistIndexItem from './artist_index_item';
 //   </div>
 // );
 
-
 class ArtistIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +28,5 @@ class ArtistIndex extends React.Component {
     );
   }
 }
-
 
 export default ArtistIndex;

@@ -17,11 +17,17 @@
 
 body{
   margin:0;
+  margin-left: 150px;
+  margin-right: 150px;
+  
 }
+
+
 html,body,div{
   /*background-color:#FFFFF0;*/
   font-size: 18px;
   font-family: sans-serif;
+
 }
 
 

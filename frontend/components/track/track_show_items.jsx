@@ -5,11 +5,14 @@ const TrackShowItems = props => {
 
   return (
 
+
     <li>
-      <div className = "tracks-show">
+      <div className='song-titles' >
+
         {props.track.title}
       </div>
     </li>
+
   );
 };
 

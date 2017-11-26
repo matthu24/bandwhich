@@ -39,13 +39,21 @@ componentWillUnmount(){
     let content;
     if (artist) {
       content =
-        <div>
+        <div className="row">
+          <div className="column col-1-2">
+            {Object.values(album).map((album1,idx) => <AlbumShowItem key={idx} album={album1} artist={artist}/>)}
 
-          <ul className="Album-show">
-            {Object.values(album).map((album,idx) => <AlbumShowItem key={idx} album={album} artist={artist}/>)}
-            {Object.values(tracks).map((track,idx) => <TrackShowItems key={idx} track={track}/>)}
+          </div>
+          <ol className= "track-list" >
 
-          </ul>
+              <p className = "footnote1"> Digital album</p>
+              <p className = "footnote2">Streaming + Download</p>
+              {Object.values(tracks).map((track,idx) => <TrackShowItems key={idx} track={track} album={album} artist={artist}/>)}
+
+
+          </ol>
+
+
 
         </div>;
     }
@@ -56,19 +64,6 @@ componentWillUnmount(){
     );
   }
 }
-//
-// <ul className="artist-albums">
-//   {
-//     albums.map(id => (
-//       <li>{id}</li>
-//     ))
-//   }
-// </ul>
 
-
-
-// <ul>
-//   {this.props.albums.map(album =><li>{album}</li>)}
-// </ul>
 
 export default ArtistShow;
