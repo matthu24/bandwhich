@@ -8,7 +8,7 @@ const ArtistIndexItem = props => {
     <li key={props.idx} className="band-item">
 
       <img className='artist-image' src= {artistImage}/>
-      <Link to={`/artists/${props.artist.id}`}>{props.artist.name}</Link>
+      <Link className = 'artist-name' to={`/artists/${props.artist.id}`}>{props.artist.name}</Link>
     </li>
   );
 };

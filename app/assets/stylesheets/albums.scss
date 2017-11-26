@@ -45,22 +45,28 @@ with a class attribute containing 'col-' */
 .footnote1{
   font-size: 14px;
   padding-top: 20px;
+  font-weight: bold;
+  padding-left: 8px;
+
 }
 
 .footnote2{
   font-size: 14px;
+  padding-top:  -10px;
+  padding-left: 8px;
+
 }
 
 
 .row{
   background-color: beige;
-  padding-bottom: 65px;
+  padding-bottom: 50px;
   padding-top: 30px;
-  padding-left: 90px;
+  padding-left: 120px;
   }
 
   .track-list{
-    padding-left: 80px;
+    padding-left: 400px;
   }
 
 

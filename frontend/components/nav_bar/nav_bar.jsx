@@ -30,12 +30,13 @@ class NavBar extends React.Component {
     return (
       <header className="nav-bar">
         <div className="left-nav">
-          <img className='logo' src="http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png"/>
+          <img className='logo' src="https://i.imgur.com/gHgI8rt.jpg"/>
         </div>
         <div className="right-nav">  {navContent}</div>
       </header>
     );
   }
 }
-
+//bandcamps logo
+// http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png
 export default NavBar;
