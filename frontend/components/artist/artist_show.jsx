@@ -1,7 +1,8 @@
 import React from 'react';
 // import AlbumShowContainer from './album_show_container';
 import { Link, Route } from 'react-router-dom';
-import ArtistShowItem from './artist_show_item';
+import AlbumShowItem from '../album/album_show_item';
+import TrackShowItems from '../track/track_show_items';
 // export default () => (
 //   <div className="discover">
 //     <h1>Discover</h1>
@@ -41,8 +42,8 @@ componentWillUnmount(){
         <div>
 
           <ul className="Album-show">
-            {Object.values(album).map((album,idx) => <ArtistShowItem key={idx} album={album} />)}
-            {Object.values(tracks).map((track,idx) => <li key = {idx}>{track.title}</li>)}
+            {Object.values(album).map((album,idx) => <AlbumShowItem key={idx} album={album} />)}
+            {Object.values(tracks).map((track,idx) => <TrackShowItems key={idx} track={track}/>)}
 
           </ul>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 
-const ArtistShowItem = props => {
+const AlbumShowItem = props => {
   const albumImage = props.album.image_file_name;
   return (
 
@@ -15,4 +15,4 @@ const ArtistShowItem = props => {
   );
 };
 
-export default ArtistShowItem;
+export default AlbumShowItem;
