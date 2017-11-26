@@ -1,0 +1,23 @@
+.spotlight1-image{
+  width: 900px;
+  // width: 80%;
+}
+
+.spotlight2-image{
+  width: 232px;
+}
+.spotlight3-image{
+  width: 233px;
+  height: auto;
+
+}
+.spotlight{
+  display: flex;
+  width: 100%;
+}
+
+.side-spotlight{
+  display:flex;
+  flex-direction: column;
+
+}

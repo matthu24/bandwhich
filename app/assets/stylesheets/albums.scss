@@ -60,13 +60,17 @@ with a class attribute containing 'col-' */
 
 .row{
   background-color: beige;
-  padding-bottom: 50px;
-  padding-top: 30px;
-  padding-left: 120px;
+  // padding-bottom: 50px;
+  // padding-top: 30px;
+  // padding-left: 120px;
+  // padding-right: 30px;
+  padding: 50px;
+  margin: auto;
   }
 
   .track-list{
     padding-left: 400px;
+
   }
 
 
