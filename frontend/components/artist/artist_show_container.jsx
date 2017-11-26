@@ -6,7 +6,8 @@ import {values} from 'lodash';
 
 const mapStateToProps = (state,ownProps) => ({
   artist: state.entities.artists,
-  album: state.entities.albums
+  album: state.entities.albums,
+  tracks: state.entities.tracks
 });
 
 const mapDispatchToProps = dispatch => ({

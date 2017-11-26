@@ -4,12 +4,13 @@ import {combineReducers} from 'redux';
 
 import artistsReducer from './artists_reducer';
 import albumsReducer from './albums_reducer';
+import tracksReducer from './tracks_reducer';
 
 
 export default combineReducers({
-
   artists: artistsReducer,
-  albums: albumsReducer
+  albums: albumsReducer,
+  tracks: tracksReducer
 });
 
 // export default entitiesReducers;

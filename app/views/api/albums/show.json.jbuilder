@@ -4,7 +4,7 @@ json.tracks do
   if @album.tracks
     @album.tracks.each do |track|
       json.set! track.id do
-        json.extract! track, :album_id,:title,:year,:image_file_name
+        json.extract! track, :id, :artist_id, :album_id, :title, :track_num, :audio_file_name
       end
     end
   end

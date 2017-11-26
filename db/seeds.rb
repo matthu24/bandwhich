@@ -8,6 +8,7 @@
 User.destroy_all
 Artist.destroy_all
 Album.destroy_all
+Track.destroy_all
 
 u1 = User.create!(username: "guest", password: "password")
 
@@ -20,3 +21,29 @@ a3 = Artist.create!(name: "Melody Hwang", genre: "gospel", image_file_name: "htt
 al1 = Album.create!(artist_id: a1.id, title: "Paper Dream", year: 2017, image_file_name:"https://i.imgur.com/VFbDBRs.jpg" )
 al2 = Album.create!(artist_id: a2.id, title: "Ninth Street", year: 2017, image_file_name: "https://i.imgur.com/PfOGvOH.jpg")
 al3 = Album.create!(artist_id: a3.id, title: "Suddenly", year: 2015, image_file_name: "https://i.imgur.com/MtOVLwY.jpg" )
+
+s1 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Prelude" , track_num: 1 , audio_file_name: "" )
+s2 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Garden" , track_num: 2 , audio_file_name: "" )
+s3 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Daydreaming" , track_num: 3 , audio_file_name: "" )
+s4 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Clocks" , track_num: 4 , audio_file_name: "" )
+s5 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "In Between" , track_num: 5 , audio_file_name: "" )
+
+s6 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Weight" , track_num: 1 , audio_file_name: "" )
+s7 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Paper Clouds" , track_num: 2 , audio_file_name: "" )
+s8 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Can't You See" , track_num: 3 , audio_file_name: "" )
+s9 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Ninth Street" , track_num: 4 , audio_file_name: "" )
+s10 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Do I Know Me" , track_num: 5 , audio_file_name: "" )
+s11 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Comfort" , track_num: 6 , audio_file_name: "" )
+s12 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Bread and Butter" , track_num: 7 , audio_file_name: "" )
+s13 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Love Ray" , track_num: 8 , audio_file_name: "" )
+s14 = Track.create!(artist_id: a2.id , album_id: al2.id , title: "Hello Friend" , track_num: 9 , audio_file_name: "" )
+
+
+s15 = Track.create!(artist_id: a3.id , album_id: al3.id , title: "Reformers" , track_num: 1 , audio_file_name: "" )
+s16 = Track.create!(artist_id: a3.id , album_id: al3.id , title: "Suddenly" , track_num: 2 , audio_file_name: "" )
+s17 = Track.create!(artist_id: a3.id , album_id: al3.id , title: "Beauty Arise" , track_num: 3 , audio_file_name: "" )
+s18 = Track.create!(artist_id: a3.id , album_id: al3.id , title: "Love Never Fails" , track_num: 4 , audio_file_name: "" )
+s19 = Track.create!(artist_id: a3.id , album_id: al3.id , title: "Come Away With Me" , track_num: 5 , audio_file_name: "" )
+s20 = Track.create!(artist_id: a3.id , album_id: al3.id , title: "No Greater Love" , track_num: 6 , audio_file_name: "" )
+s21 = Track.create!(artist_id: a3.id , album_id: al3.id , title: "I Surrender" , track_num: 7 , audio_file_name: "" )
+s23 = Track.create!(artist_id: a3.id , album_id: al3.id , title: "The Secret of the Secret Place" , track_num: 8 , audio_file_name: "" )

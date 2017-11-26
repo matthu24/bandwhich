@@ -24,7 +24,7 @@ class ArtistShow extends React.Component {
   }
 }
 
-//so that artist state does not accumulate 
+//so that artist state does not accumulate
 componentWillUnmount(){
   this.props.clearArtists();
 }
@@ -32,6 +32,7 @@ componentWillUnmount(){
   render(){
     const artist = this.props.artist;
     const album = this.props.album;
+    const tracks = this.props.tracks;
     //puts artist's album keys into an array
     // const albums =this.props.artist.albums;
     let content;
@@ -39,8 +40,10 @@ componentWillUnmount(){
       content =
         <div>
 
-          <ul>
+          <ul className="Album-show">
             {Object.values(album).map((album,idx) => <ArtistShowItem key={idx} album={album} />)}
+            {Object.values(tracks).map((track,idx) => <li key = {idx}>{track.title}</li>)}
+
           </ul>
 
         </div>;
