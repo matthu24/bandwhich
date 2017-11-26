@@ -17,6 +17,7 @@ class ArtistIndex extends React.Component {
     this.props.fetchAllArtists();
   }
 
+
   render(){
     // const spotlightArtists = this.props.artists.slice(0,3);
     // const artist1 = this.props.artists[0];
@@ -25,29 +26,18 @@ class ArtistIndex extends React.Component {
       <div>
         <div className = "spotlight">
           <div className="artist1">
-
               <img className='spotlight1-image' src= "https://i.imgur.com/FFWYYGU.jpg" />
-
           </div>
           <div className = 'side-spotlight'>
             <div className="artist2">
-
                 <img className='spotlight2-image' src= "https://i.imgur.com/PfOGvOH.jpg" />
-
             </div>
-
             <div className="artist3">
-
                 <img className='spotlight3-image' src= "https://i.imgur.com/MtOVLwY.jpg" />
-          
             </div>
           </div>
-
         </div>
         <ul className="artist-index">
-
-
-
           {
             this.props.artists.map((artist,idx) => (
                 <ArtistIndexItem key = {idx} artist={artist}/> ))

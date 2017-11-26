@@ -5,15 +5,17 @@
 
 .spotlight2-image{
   width: 232px;
+  margin:0;
 }
 .spotlight3-image{
   width: 233px;
   height: auto;
-
+  margin: 0;
 }
 .spotlight{
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 .side-spotlight{
