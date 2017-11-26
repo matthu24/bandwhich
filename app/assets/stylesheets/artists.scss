@@ -6,8 +6,10 @@
 
 .artist-index{
   display:flex;
-  justify-content: space-around;
+  // justify-content: space-around;
   align-items: center;
+  width:100%;
+  align-content: center;
 }
 
 .artist-name{
@@ -18,7 +20,7 @@
 }
 
 .band-item{
-  margin:10px;
+  margin:30px;
   padding-bottom: 10px;
   display:flex;
   flex-direction: column;
