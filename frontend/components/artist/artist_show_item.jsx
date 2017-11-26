@@ -2,13 +2,15 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 
 const ArtistShowItem = props => {
-  const artistImage = props.artist.image_file_name;
+  const albumImage = props.album.image_file_name;
   return (
 
-    <li key={props.idx}>
+    <li>
+      <div className = "album-show">
+        <h2>{props.album.title}</h2>
+        <img className='album-image' src= {albumImage}/>
+      </div>
 
-      <img className='artist-image' src= {artistImage}/>
-      <Link to={`/artists/${props.artist.id}`}>{props.artist.name}</Link>
     </li>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 // import AlbumShowContainer from './album_show_container';
 import { Link, Route } from 'react-router-dom';
-import ArtistShowItem from 'artist_show_item';
+import ArtistShowItem from './artist_show_item';
 // export default () => (
 //   <div className="discover">
 //     <h1>Discover</h1>
@@ -22,6 +22,11 @@ class ArtistShow extends React.Component {
   if (this.props.match.params.artistId !== newProps.match.params.artistId) {
     this.props.fetchSingleArtist(newProps.match.params.artistId);
   }
+}
+
+//so that artist state does not accumulate 
+componentWillUnmount(){
+  this.props.clearArtists();
 }
 
   render(){

@@ -1,4 +1,4 @@
-import { RECEIVE_ARTIST,RECEIVE_ARTISTS } from '../actions/artist';
+import { RECEIVE_ARTIST,RECEIVE_ARTISTS,CLEAR_ARTISTS } from '../actions/artist';
 import merge from 'lodash/merge';
 
 export default (artists={},action) => {
@@ -10,6 +10,8 @@ export default (artists={},action) => {
     case RECEIVE_ARTIST:
       // return merge({},artists,{[action.artist.id]:action.artist});
       return action.artist;
+    case CLEAR_ARTISTS:
+      return {};
     default:
       return artists;
   }
