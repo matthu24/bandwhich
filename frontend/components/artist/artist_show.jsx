@@ -42,7 +42,7 @@ componentWillUnmount(){
         <div>
 
           <ul className="Album-show">
-            {Object.values(album).map((album,idx) => <AlbumShowItem key={idx} album={album} artist = {artist} />)}
+            {Object.values(album).map((album,idx) => <AlbumShowItem key={idx} album={album} artist={artist}/>)}
             {Object.values(tracks).map((track,idx) => <TrackShowItems key={idx} track={track}/>)}
 
           </ul>

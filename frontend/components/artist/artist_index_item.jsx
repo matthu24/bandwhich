@@ -5,7 +5,7 @@ const ArtistIndexItem = props => {
   const artistImage = props.artist.image_file_name;
   return (
 
-    <li key={props.idx}>
+    <li key={props.idx} className="band-item">
 
       <img className='artist-image' src= {artistImage}/>
       <Link to={`/artists/${props.artist.id}`}>{props.artist.name}</Link>
