@@ -42,19 +42,12 @@ componentWillUnmount(){
         <div className="row">
           <div className="column col-1-2">
             {Object.values(album).map((album1,idx) => <AlbumShowItem key={idx} album={album1} artist={artist}/>)}
-
           </div>
           <ol className= "track-list" >
-
               <p className = "footnote1"> Digital album</p>
               <p className = "footnote2">Streaming + Download</p>
               {Object.values(tracks).map((track,idx) => <TrackShowItems key={idx} track={track} album={album} artist={artist}/>)}
-
-
           </ol>
-
-
-
         </div>;
     }
     return(

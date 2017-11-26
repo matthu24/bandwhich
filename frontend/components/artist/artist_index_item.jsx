@@ -7,8 +7,11 @@ const ArtistIndexItem = props => {
 
     <li key={props.idx} className="band-item">
 
-      <img className='artist-image' src= {artistImage}/>
-      <Link className = 'artist-name' to={`/artists/${props.artist.id}`}>{props.artist.name}</Link>
+      <Link className = 'artist-name' to={`/artists/${props.artist.id}`}>
+        <img className='artist-image' src= {artistImage}/>
+        {props.artist.name}
+        <p className='artist-description'>{props.artist.genre}</p>
+      </Link>
     </li>
   );
 };
