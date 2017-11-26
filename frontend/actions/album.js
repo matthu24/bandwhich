@@ -1,4 +1,4 @@
-import { fetchAlbum,fetchAlbums } from '../utils/artist_util';
+import { fetchAlbum,fetchAlbums } from '../utils/album_util';
 export const RECEIVE_ALBUM = 'RECEIVE_ALBUM';
 export const RECEIVE_ALBUMS = 'RECEIVE_ALBUMS';
 

@@ -8,7 +8,8 @@ export default (artists={},action) => {
      return merge({},artists,action.artists);
 
     case RECEIVE_ARTIST:
-      return merge({},artists,{[action.artist.id]:action.artist});
+      // return merge({},artists,{[action.artist.id]:action.artist});
+      return action.artist;
     default:
       return artists;
   }

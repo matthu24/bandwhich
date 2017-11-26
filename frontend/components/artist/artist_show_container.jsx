@@ -5,8 +5,8 @@ import ArtistShow from './artist_show';
 import {values} from 'lodash';
 
 const mapStateToProps = (state,ownProps) => ({
-  artist: state.entities.artists[ownProps.match.params.artistId],
-  albums: state.entities.albums
+  artist: state.entities.artists,
+  album: state.entities.albums
 });
 
 const mapDispatchToProps = dispatch => ({

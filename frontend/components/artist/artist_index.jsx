@@ -22,7 +22,7 @@ class ArtistIndex extends React.Component {
         <ul className="artist-index">
           {
             this.props.artists.map((artist,idx) => (
-                <ArtistIndexItem idx = {idx} artist={artist}/> ))
+                <ArtistIndexItem key = {idx} artist={artist}/> ))
           }
         </ul>
       </div>
