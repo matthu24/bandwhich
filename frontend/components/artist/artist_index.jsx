@@ -11,17 +11,30 @@ import { Link, Route } from 'react-router-dom';
 class ArtistIndex extends React.Component {
   constructor(props) {
     super(props);
+    
   }
 
   componentDidMount(){
     this.props.fetchAllArtists();
   }
 
+  // componentWillReceiveProp(newProps){
+  //   this.props.fetchAllArtists();
+  // }
+
 
   render(){
     // const spotlightArtists = this.props.artists.slice(0,3);
     // const artist1 = this.props.artists[0];
     // debugger
+
+    // if (!this.props.artists) return null;
+    //
+    const artist1 = this.props.artists[0];
+    // console.log(artist);
+    // debugger
+
+
     return(
       <div>
         <div className = "spotlight">
@@ -37,6 +50,7 @@ class ArtistIndex extends React.Component {
             </div>
           </div>
         </div>
+        {console.log(this.props.artists)}
         <ul className="artist-index">
           {
             this.props.artists.map((artist,idx) => (

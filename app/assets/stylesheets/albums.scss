@@ -27,6 +27,7 @@ with a class attribute containing 'col-' */
 }
 .col-1-2{
   width: 50%;
+
 }
 
 // .album-show{
@@ -35,8 +36,9 @@ with a class attribute containing 'col-' */
 // }
 
 .album-image{
-  width: 350px;
-  height: 320px;
+  // width: 350px;
+  // height: 320px;
+  width: 160%;
 }
 
 .song-titles{
@@ -58,8 +60,11 @@ with a class attribute containing 'col-' */
 
 }
 
-
-.row{
+.artist-page{
+  display:flex;
+  justify-content: center;
+}
+.artist-box{
   background-color: beige;
   // padding-bottom: 50px;
   // padding-top: 30px;
@@ -67,10 +72,20 @@ with a class attribute containing 'col-' */
   // padding-right: 30px;
   padding: 50px;
   margin: 10px;
+  width: 100%;
+  display:flex;
+  justify-content: space-around;
+  border: 1px solid black;
   }
 
-  .track-list{
-    padding-left: 400px;
+  .artist-box-left{
+    width: 200px;
+    // border: 1px solid black;
+  }
+
+  .artist-box-right{
+    // padding-left: 400px;
+    // border: 1px solid black;
 
   }
 
