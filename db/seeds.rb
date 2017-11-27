@@ -13,7 +13,7 @@ Track.destroy_all
 u1 = User.create!(username: "guest", password: "password")
 
 
-a1 = Artist.create!(name: "Matthew Hu", genre: "folk", image_file_name: "https://i.imgur.com/SD87Luu.jpg" )
+a1 = Artist.create!(name: "Matthew Hu", genre: "folk", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MatthewHuProfile.png" )
 a2 = Artist.create!(name: "Harry Liu", genre: "pop", image_file_name:"https://i.imgur.com/ha2cGju.jpg")
 a3 = Artist.create!(name: "Melody Hwang", genre: "gospel", image_file_name: "https://i.imgur.com/mMm2gJ8.jpg" )
 a4 = Artist.create!(name: "Edan Lewis", genre: "indie", image_file_name: "https://i.imgur.com/0TaHyLy.jpg")
@@ -25,7 +25,7 @@ al3 = Album.create!(artist_id: a3.id, title: "Suddenly", year: 2015, image_file_
 al4 = Album.create!(artist_id: a4.id, title: "The 404 Sessions", year: 2015, image_file_name: "https://i.imgur.com/5eCsBP0.jpg" )
 
 
-s1 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Prelude" , track_num: 1 , audio_file_name: "" )
+s1 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Prelude" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/01_Prelude%2Bmastering_1_variant.wav" )
 s2 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Garden" , track_num: 2 , audio_file_name: "" )
 s3 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Daydreaming" , track_num: 3 , audio_file_name: "" )
 s4 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Clocks" , track_num: 4 , audio_file_name: "" )

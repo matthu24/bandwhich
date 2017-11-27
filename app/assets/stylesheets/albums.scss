@@ -43,6 +43,8 @@ with a class attribute containing 'col-' */
 
 .song-titles{
   padding: 10px;
+  font-size: 16px;
+  font-style: italic;
 }
 
 .footnote1{
@@ -51,6 +53,11 @@ with a class attribute containing 'col-' */
   font-weight: bold;
   padding-left: 8px;
 
+}
+
+.artist-bio{
+  font-size: 14px;
+  font-style: italic;
 }
 
 .footnote2{
@@ -78,12 +85,12 @@ with a class attribute containing 'col-' */
   width: 100%;
   display:flex;
   justify-content: center;
-  border: 1px solid black;
+  // border: 1px solid black;
   }
 
   .artist-box-left{
     width: 300px;
-    margin-right: 50px;
+    // margin-right: 50px;
     // border: 1px solid black;
   }
 
@@ -92,6 +99,15 @@ with a class attribute containing 'col-' */
     // border: 1px solid black;
     margin-left: 50px;
     margin-top: -5px;
+  }
+
+  .artist-box-far-right{
+    // border: 1px solid black;
+    margin-left: 50px;
+    padding: 40px;
+    margin-top: -10px;
+    width: 20%;
+
   }
 
 

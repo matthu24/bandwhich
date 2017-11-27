@@ -3,6 +3,7 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import AlbumShowItem from '../album/album_show_item';
 import TrackShowItems from '../track/track_show_items';
+import SongPlayer from '../track/song_player';
 // export default () => (
 //   <div className="discover">
 //     <h1>Discover</h1>
@@ -52,6 +53,13 @@ class ArtistShow extends React.Component {
               <p className = "footnote2">Streaming + Download</p>
               {Object.values(tracks).map((track,idx) => <TrackShowItems key={idx} track={track} album={album} artist={artist}/>)}
           </ol>
+          <div className="artist-box-far-right">
+            <img className='artist-image' src= {artist.image_file_name}/>
+            <div className="artist-bio">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+            </div>
+          </div>
+
         </div>
       </div>
     }
