@@ -38,7 +38,7 @@ with a class attribute containing 'col-' */
 .album-image{
   // width: 350px;
   // height: 320px;
-  width: 160%;
+  width: 100%;
 }
 
 .song-titles{
@@ -71,22 +71,26 @@ with a class attribute containing 'col-' */
   // padding-left: 120px;
   // padding-right: 30px;
   padding: 50px;
+    // padding-right: 600px;
+
+    padding-left: -60px;
   margin: 10px;
   width: 100%;
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
   border: 1px solid black;
   }
 
   .artist-box-left{
-    width: 200px;
+    width: 300px;
+    margin-right: 50px;
     // border: 1px solid black;
   }
 
   .artist-box-right{
     // padding-left: 400px;
     // border: 1px solid black;
-
+    margin-left: 50px;
   }
 
 
