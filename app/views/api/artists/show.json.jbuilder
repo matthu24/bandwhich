@@ -1,5 +1,7 @@
 json.partial! "/api/artists/artist", artist: @artist
 albums = @artist.albums
+
+#need this for the albums reducer when it responds to a receiveArtist action
 json.albums do
   if @artist.albums
     @artist.albums.each do |album|
@@ -10,6 +12,7 @@ json.albums do
   end
 end
 
+#likewise 
 tracks = @artist.tracks
 json.tracks do
   if @artist.tracks

@@ -3,3 +3,5 @@
     json.extract! album, :id, :artist_id, :title, :image_file_name
   end
 end
+
+#D

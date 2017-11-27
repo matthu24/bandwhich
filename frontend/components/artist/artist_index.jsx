@@ -11,16 +11,15 @@ import { Link, Route } from 'react-router-dom';
 class ArtistIndex extends React.Component {
   constructor(props) {
     super(props);
-    
+
   }
 
+  //this is what changes the state and gets all the artists to fill the artist slice of state
+  //when using ajax should use componentdidmount
   componentDidMount(){
     this.props.fetchAllArtists();
   }
 
-  // componentWillReceiveProp(newProps){
-  //   this.props.fetchAllArtists();
-  // }
 
 
   render(){
@@ -28,10 +27,10 @@ class ArtistIndex extends React.Component {
     // const artist1 = this.props.artists[0];
     // debugger
 
-    // if (!this.props.artists) return null;
+    if (this.props.artists.length === 0) return null;
     //
     const artist1 = this.props.artists[0];
-    // console.log(artist);
+    console.log(artist1.name);
     // debugger
 
 
@@ -50,7 +49,7 @@ class ArtistIndex extends React.Component {
             </div>
           </div>
         </div>
-        {console.log(this.props.artists)}
+
         <ul className="artist-index">
           {
             this.props.artists.map((artist,idx) => (

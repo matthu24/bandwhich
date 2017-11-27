@@ -15,20 +15,23 @@ class ArtistShow extends React.Component {
     super(props);
   }
 
+  //need this to get all my artist info (albums,tracks)
   componentDidMount(){
     this.props.fetchSingleArtist(this.props.match.params.artistId);
   }
 
+  //I might only need this if my artist index page was still rendering
+  //even after clicking on an artist show
   componentWillReceiveProps(newProps) {
-  if (this.props.match.params.artistId !== newProps.match.params.artistId) {
-    this.props.fetchSingleArtist(newProps.match.params.artistId);
+    if (this.props.match.params.artistId !== newProps.match.params.artistId) {
+      this.props.fetchSingleArtist(newProps.match.params.artistId);
+    }
   }
-}
 
 //so that artist state does not accumulate
-componentWillUnmount(){
-  this.props.clearArtists();
-}
+  componentWillUnmount(){
+    this.props.clearArtists();
+  }
 
   render(){
     const artist = this.props.artist;
