@@ -11,7 +11,7 @@ const ArtistIndexItem = props => {
       <Link className = 'artist-name' to={`/artists/${props.artist.id}`}>
         <img className='artist-image' src= {artistImage}/>
         {props.artist.name}
-        <p className='artist-description'>Genre: {props.artist.genre}</p>
+        <div className='artist-description'>{props.artist.genre}</div>
       </Link>
 
     </li>
