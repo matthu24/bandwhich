@@ -5,7 +5,7 @@ import {clearCurrentTrack} from '../../actions/track';
 import ArtistShow from './artist_show';
 import {values} from 'lodash';
 
-//this is all untrue now:  it was an antipattern bc it is expensive to keep hitting the database 
+//this is all untrue now:  it was an antipattern bc it is expensive to keep hitting the database
 
 //at this point, the state has changed because of mapDispatchToProps
 //state.entities.artists is not all the artists now; it is only one
@@ -26,7 +26,8 @@ const mapStateToProps = (state,ownProps) => ({
   // artist: state.entities.artists,
   album: state.entities.albums,
   tracks: state.entities.tracks,
-  currentTrack: state.ui.currentTrack
+  currentTrack: state.ui.currentTrack,
+  playStatus: state.play_status
 });
 
 const mapDispatchToProps = dispatch => ({

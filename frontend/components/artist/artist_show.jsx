@@ -50,7 +50,7 @@ class ArtistShow extends React.Component {
               <p className = "footnote1"> Digital album</p>
               <p className = "footnote2">Streaming + Download</p>
               {Object.values(tracks).map((track,idx) => <TrackShowContainer key={idx} track={track}/>)}
-              {<SongPlayer playing={true} audio={this.props.currentTrack.audio_file_name}/>}
+              {<SongPlayer playing={this.props.playStatus} audio={this.props.currentTrack.audio_file_name}/>}
 
           </ol>
           <div className="artist-box-far-right">

@@ -2,6 +2,7 @@
 export const RECEIVE_TRACK = 'RECEIVE_TRACK';
 export const RECEIVE_TRACKS = 'RECEIVE_TRACKS';
 export const CLEAR_CURRENT_TRACK = 'CLEAR_CURRENT_TRACK';
+export const CHANGE_PLAY_STATUS = "CHANGE_PLAY_STATUS";
 
 const receiveTrack = (track) => ({
   type: RECEIVE_TRACK,
@@ -15,8 +16,15 @@ const receiveTracks = (tracks) => ({
 
 const clearTrackAction = () => ({
   type: CLEAR_CURRENT_TRACK
-
 });
+
+const changePlayStatusAction = () => ({
+  type: CHANGE_PLAY_STATUS
+});
+
+export const changePlayStatus = () => dispatch => {
+  return dispatch(changePlayStatusAction());
+};
 
 export const clearCurrentTrack = () => dispatch => {
   return dispatch(clearTrackAction());

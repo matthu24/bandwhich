@@ -17,14 +17,16 @@ import entitiesReducer from './entities_reducer';
 import sessionReducer from './session';
 import sessionErrorsReducer from './session_errors_reducer';
 import currentTrackReducer from './current_track_reducer';
+import playStatusReducer from './play_status_reducer';
+
 // import uiReducer from './ui_reducer';
 
 export default combineReducers({
   session: sessionReducer,
   errors: sessionErrorsReducer,
   entities: entitiesReducer,
-  ui: currentTrackReducer
-
+  ui: currentTrackReducer,
+  play_status: playStatusReducer
 });
 
 // export default rootReducer;

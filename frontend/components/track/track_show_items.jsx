@@ -19,12 +19,17 @@ class TrackShowItems extends React.Component {
   //   }
   // }
 
-  //dispatch the action for resetting currentTrack
-  //Move SongPlayer out of track show items
-  //have it always play, playing=true
-  //
+
+
+//change playStatus in playMusic if
+//playStatus is currently false
+//OR if currentTrack's id === this.props.track.title
+
   playMusic(){
     this.props.changeCurrentTrack(this.props.track);
+    if (this.props.playStatus === false || this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name ) {
+      this.props.changePlayStatus();
+    }
   }
 
   render () {

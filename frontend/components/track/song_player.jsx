@@ -20,7 +20,7 @@ class SongPlayer extends React.Component {
       <div>
       <ReactHowler
         src={[audioFileName]}
-        playing={true}
+        playing={playing}
 
       />
     <button onClick={this.handlePause}>Pause</button>
