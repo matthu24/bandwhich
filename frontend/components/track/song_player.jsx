@@ -20,10 +20,8 @@ class SongPlayer extends React.Component {
       <div>
       <ReactHowler
         src={[audioFileName]}
-        playing={playing}
-
+        playing={this.props.playing}
       />
-    <button onClick={this.handlePause}>Pause</button>
     </div>
   );
   }

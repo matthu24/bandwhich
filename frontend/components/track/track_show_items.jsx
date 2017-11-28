@@ -36,7 +36,7 @@ class TrackShowItems extends React.Component {
     return (
       <li>
         <div className='song-titles' >
-          <button onClick={this.playMusic}>Play</button>
+          <button onClick={this.playMusic} className="play-button"></button>
           {this.props.track.title}
         </div>
       </li>
