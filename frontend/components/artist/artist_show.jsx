@@ -47,7 +47,7 @@ class ArtistShow extends React.Component {
           <div className = 'artist-box-left' >
 
             {Object.values(album).map((album1,idx) => <AlbumShowItem key={idx} album={album1} artist={artist}/>)}
-            asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf
+
           </div>
           <ol className= "artist-box-right" >
               <p className = "footnote1"> Digital album</p>
@@ -59,7 +59,9 @@ class ArtistShow extends React.Component {
           <div className="artist-box-far-right">
             <img className='artist-avatar' src= {artist.image_file_name}/>
             <div className="artist-bio">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+
+              <div>{artist.name}</div>
+              <p>{artist.genre}</p>
             </div>
           </div>
 

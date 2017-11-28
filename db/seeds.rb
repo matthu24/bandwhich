@@ -16,16 +16,16 @@ u1 = User.create!(username: "guest", password: "password")
 
 #bio_rand = rand(1) + 1
 #bio: faker::Hipster.paragraph(bio_rand)
-a1 = Artist.create!(name: "Matthew Hu", genre: "folk", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MatthewHuProfile.png" )
-a2 = Artist.create!(name: "Harry Liu", genre: "pop", image_file_name:"https://i.imgur.com/ha2cGju.jpg")
-a3 = Artist.create!(name: "Melody Hwang", genre: "gospel", image_file_name: "https://i.imgur.com/mMm2gJ8.jpg" )
-a4 = Artist.create!(name: "Edan Lewis", genre: "indie", image_file_name: "https://i.imgur.com/0TaHyLy.jpg")
+a1 = Artist.create!(name: "Matthew Hu", genre: "Inspired by the likes of Tchaikovsky and good coffee.  From Seattle, WA.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MatthewHuProfile.png" )
+a2 = Artist.create!(name: "Harry Liu", genre: "Singer-songwriter from Bay Area, CA. Vibes. Grooves. Jams. Let's go.", image_file_name:"https://i.imgur.com/ha2cGju.jpg")
+a3 = Artist.create!(name: "Melody Hwang", genre: "I consider myself a storyteller who loves using music as a means of changing the world.", image_file_name: "https://i.imgur.com/mMm2gJ8.jpg" )
+a4 = Artist.create!(name: "Edan Lewis", genre: "I made these songs, while working at a hotel in Aomori, Japan; from the confines of room 404.", image_file_name: "https://i.imgur.com/0TaHyLy.jpg")
 
 # :artist_id,:title,:year,:image_file_name
 al1 = Album.create!(artist_id: a1.id, title: "Paper Dream", year: 2017, image_file_name:"https://i.imgur.com/VFbDBRs.jpg" )
 al2 = Album.create!(artist_id: a2.id, title: "Ninth Street", year: 2017, image_file_name: "https://i.imgur.com/PfOGvOH.jpg")
 al3 = Album.create!(artist_id: a3.id, title: "Suddenly", year: 2015, image_file_name: "https://i.imgur.com/MtOVLwY.jpg" )
-al4 = Album.create!(artist_id: a4.id, title: "The 404 Sessions", year: 2015, image_file_name: "https://i.imgur.com/5eCsBP0.jpg" )
+al4 = Album.create!(artist_id: a4.id, title: "The 404 Sessions", year: 2015, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/404Session.png" )
 
 
 s1 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Prelude" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/01_Prelude%2Bmastering_1_variant.wav" )

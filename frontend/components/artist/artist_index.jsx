@@ -20,8 +20,6 @@ class ArtistIndex extends React.Component {
     this.props.fetchAllArtists();
   }
 
-
-
   render(){
 
     //this is so that I have access to artists after first render
@@ -31,18 +29,18 @@ class ArtistIndex extends React.Component {
     const artist1 = this.props.artists[0];
     const artist2 = this.props.artists[1];
     const artist3 = this.props.artists[2];
-    //artist1,2,3 on first render do not exist 
+    //artist1,2,3 on first render do not exist
     if (!artist1 || !artist2 || !artist3) return null;
 
     return(
-      <div>
+      <div className = "spotlight-container">
         <div className = "spotlight">
           <div className="artist1">
             <Link className = 'artist-name' to={`/artists/${artist1.id}`}>
                <img className='spotlight1-image' src= "https://i.imgur.com/FFWYYGU.jpg" />
             </Link>
-
           </div>
+
           <div className = 'side-spotlight'>
             <div className="artist2">
               <Link className = 'artist-name' to={`/artists/${artist2.id}`}>

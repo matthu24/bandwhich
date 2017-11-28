@@ -1,20 +1,17 @@
 .spotlight1-image{
-  width: 832px;
+  width: 900px;
   margin-right: 4px;
-  // width: 100%;
+  // width: 80%;
 }
 
 .spotlight2-image{
-  width: 215px;
+  width: 232px;
   margin-bottom: 4px;
-  // width: 40%;
 }
 .spotlight3-image{
-  width: 215px;
+  width: 233px;
   height: auto;
   margin: 0;
-  // width: 40%;
-
 }
 .spotlight{
   display: flex;
@@ -26,4 +23,8 @@
   display:flex;
   flex-direction: column;
 
+}
+
+.spotlight-container{
+  width: 100%;
 }
