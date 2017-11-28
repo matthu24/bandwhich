@@ -14,8 +14,8 @@ const receiveTracks = (tracks) => ({
 });
 
 const clearTrackAction = () => ({
-  type: CLEAR_CURRENT_TRACK,
-  currentTrack: {audio_file_name:""}
+  type: CLEAR_CURRENT_TRACK
+
 });
 
 export const clearCurrentTrack = () => dispatch => {

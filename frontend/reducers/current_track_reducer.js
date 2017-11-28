@@ -14,19 +14,15 @@ export default (state = _nullTrack, action) => {
   switch(action.type) {
     case RECEIVE_TRACK:
       let newState = merge({},state);
-
-      if (newState.currentTrack!==action.track ) {
         newState.currentTrack = action.track;
         //if they are the same, we want to pause the song,
         //and therefore assign currentTrack to "" again
-      } else {
-        newState.currentTrack = {audio_file_name: ""};
-      }
+
       return newState;
     case CLEAR_CURRENT_TRACK:
       let nextState = merge({},state);
-      newState.currentTrack = {audio_file_name: ""};
-      return newState;
+      nextState.currentTrack = {audio_file_name: ""};
+      return nextState;
 
     default:
       return state;

@@ -33,7 +33,7 @@ class ArtistShow extends React.Component {
 //so that artist state does not accumulate
   componentWillUnmount(){
     this.props.clearArtists();
-    // this.props.clearCurrentTrack();
+    this.props.clearCurrentTrack();
   }
 
   render(){
