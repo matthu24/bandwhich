@@ -23,29 +23,35 @@ class ArtistIndex extends React.Component {
 
 
   render(){
-    // const spotlightArtists = this.props.artists.slice(0,3);
-    // const artist1 = this.props.artists[0];
-    // debugger
 
+    //this is so that I have access to artists after first render
+    //return null on first render when artists array is empty
     if (this.props.artists.length === 0) return null;
-    //
+
     const artist1 = this.props.artists[0];
-    console.log(artist1.name);
-    // debugger
+    const artist2 = this.props.artists[1];
+    const artist3 = this.props.artists[2];
 
 
     return(
       <div>
         <div className = "spotlight">
           <div className="artist1">
-              <img className='spotlight1-image' src= "https://i.imgur.com/FFWYYGU.jpg" />
+            <Link className = 'artist-name' to={`/artists/${artist1.id}`}>
+               <img className='spotlight1-image' src= "https://i.imgur.com/FFWYYGU.jpg" />
+            </Link>
+
           </div>
           <div className = 'side-spotlight'>
             <div className="artist2">
+              <Link className = 'artist-name' to={`/artists/${artist2.id}`}>
                 <img className='spotlight2-image' src= "https://i.imgur.com/PfOGvOH.jpg" />
+              </Link>
             </div>
             <div className="artist3">
+              <Link className = 'artist-name' to={`/artists/${artist3.id}`}>
                 <img className='spotlight3-image' src= "https://i.imgur.com/MtOVLwY.jpg" />
+              </Link>
             </div>
           </div>
         </div>
