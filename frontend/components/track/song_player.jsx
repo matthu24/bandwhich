@@ -14,7 +14,11 @@ class SongPlayer extends React.Component {
   }
 
   render () {
+
     const audioFileName = this.props.audio;
+    console.log(audioFileName);
+    if(audioFileName === "") return null;
+
     const playing = this.props.playing;
     return (
       <div>

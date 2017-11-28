@@ -11,7 +11,6 @@ class Login extends React.Component {
   //redirects the user to the splash page after logging in
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      // console.log("logged in");
       this.props.history.push('/artist');
     }
   }
@@ -50,7 +49,7 @@ class Login extends React.Component {
   }
   render(){
     if (this.props.location.pathname === '/guest') {
-      console.log(this.props);
+
     this.guestUser();
     return null;
   }

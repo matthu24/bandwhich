@@ -31,7 +31,8 @@ class ArtistIndex extends React.Component {
     const artist1 = this.props.artists[0];
     const artist2 = this.props.artists[1];
     const artist3 = this.props.artists[2];
-
+    //artist1,2,3 on first render do not exist 
+    if (!artist1 || !artist2 || !artist3) return null;
 
     return(
       <div>
