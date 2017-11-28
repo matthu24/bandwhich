@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
 User.destroy_all
 Artist.destroy_all
 Album.destroy_all
@@ -12,7 +14,8 @@ Track.destroy_all
 
 u1 = User.create!(username: "guest", password: "password")
 
-
+#bio_rand = rand(1) + 1
+#bio: faker::Hipster.paragraph(bio_rand)
 a1 = Artist.create!(name: "Matthew Hu", genre: "folk", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MatthewHuProfile.png" )
 a2 = Artist.create!(name: "Harry Liu", genre: "pop", image_file_name:"https://i.imgur.com/ha2cGju.jpg")
 a3 = Artist.create!(name: "Melody Hwang", genre: "gospel", image_file_name: "https://i.imgur.com/mMm2gJ8.jpg" )

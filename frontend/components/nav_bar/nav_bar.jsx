@@ -30,7 +30,7 @@ class NavBar extends React.Component {
     return (
       <header className="nav-bar">
         <div className="left-nav">
-          <img className='logo' src="https://i.imgur.com/gHgI8rt.jpg"/>
+          <Link to='/artists'><img className='logo' src="https://i.imgur.com/gHgI8rt.jpg"/></Link>
         </div>
         <div className="right-nav">  {navContent}</div>
       </header>
