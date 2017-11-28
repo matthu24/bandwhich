@@ -25,7 +25,7 @@ class TrackShowItems extends React.Component {
   //have it always play, playing=true
   //
   playMusic(){
-    this.props.changeCurrentTrack(this.props.track.id);
+    this.props.changeCurrentTrack(this.props.track);
   }
 
   render () {
@@ -34,7 +34,6 @@ class TrackShowItems extends React.Component {
         <div className='song-titles' >
           <button onClick={this.playMusic}>Play</button>
           {this.props.track.title}
-          {<SongPlayer playing={true} audio={this.props.track.audio_file_name}/>}
         </div>
       </li>
     );

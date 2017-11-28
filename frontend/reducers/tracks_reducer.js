@@ -9,6 +9,7 @@ export default(state = {}, action) => {
       // return ({}, )
       let newState = action.artist.tracks;
       return newState;
+
     default:
       return state;
   }
