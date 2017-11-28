@@ -8,6 +8,8 @@ class TrackShowItems extends React.Component {
     super(props);
     // this.state={playing: false};
     this.playMusic = this.playMusic.bind(this);
+    this.changePlayButton = this.changePlayButton.bind(this);
+    this.state = {buttonClassName:"play-button"};
   }
 
   //local playMusic
@@ -27,16 +29,30 @@ class TrackShowItems extends React.Component {
 
   playMusic(){
     this.props.changeCurrentTrack(this.props.track);
+
     if (this.props.playStatus === false || this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name ) {
       this.props.changePlayStatus();
     }
+
+    if (this.props.playStatus === true && this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name){
+      this.changePlayButton();
+    }
+
+
   }
 
+  changePlayButton(){
+    this.setState({buttonClassName:"pause-button"});
+  }
+
+  //want to render a pause symbol if play_status is true AND ui.currentTrack is the song that the button is attached to
+  //if this.props.playStatus === true && this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name
   render () {
     return (
       <li>
         <div className='song-titles' >
-          <button onClick={this.playMusic} className="play-button"></button>
+
+          <button onClick={this.playMusic} className={this.state.buttonClassName}></button>
           {this.props.track.title}
         </div>
       </li>

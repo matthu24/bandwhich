@@ -47,7 +47,7 @@ class ArtistShow extends React.Component {
           <div className = 'artist-box-left' >
 
             {Object.values(album).map((album1,idx) => <AlbumShowItem key={idx} album={album1} artist={artist}/>)}
-
+            
           </div>
           <ol className= "artist-box-right" >
               <p className = "footnote1"> Digital album</p>
