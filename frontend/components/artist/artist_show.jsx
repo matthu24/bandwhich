@@ -4,11 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import AlbumShowItem from '../album/album_show_item';
 import TrackShowContainer from '../track/track_show_container';
 import SongPlayer from '../track/song_player';
-// export default () => (
-//   <div className="discover">
-//     <h1>Discover</h1>
-//   </div>
-// );
+
 
 
 

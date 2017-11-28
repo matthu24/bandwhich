@@ -5,6 +5,8 @@ import {clearCurrentTrack} from '../../actions/track';
 import ArtistShow from './artist_show';
 import {values} from 'lodash';
 
+//this is all untrue now:  it was an antipattern bc it is expensive to keep hitting the database 
+
 //at this point, the state has changed because of mapDispatchToProps
 //state.entities.artists is not all the artists now; it is only one
 //because mapDispatchToProps allows componentDidMount to dispatch fetchSingleArtist

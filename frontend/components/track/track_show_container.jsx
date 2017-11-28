@@ -4,7 +4,7 @@ import {changeCurrentTrack} from '../../actions/track';
 import TrackShowItems from './track_show_items';
 import {values} from 'lodash';
 
-
+//track is like ownprops destructured 
 const mapStateToProps = (state, {track}) => ({
   track
 });

@@ -3,7 +3,6 @@ import { Link, Route } from 'react-router-dom';
 import SongPlayer from './song_player';
 
 
-
 class TrackShowItems extends React.Component {
   constructor(props){
     super(props);
