@@ -2,13 +2,14 @@ import React from 'react';
 // import AlbumShowContainer from './album_show_container';
 import { Link, Route } from 'react-router-dom';
 import AlbumShowItem from '../album/album_show_item';
-import TrackShowItems from '../track/track_show_items';
+import TrackShowContainer from '../track/track_show_container';
 import SongPlayer from '../track/song_player';
 // export default () => (
 //   <div className="discover">
 //     <h1>Discover</h1>
 //   </div>
 // );
+
 
 
 class ArtistShow extends React.Component {
@@ -51,7 +52,7 @@ class ArtistShow extends React.Component {
           <ol className= "artist-box-right" >
               <p className = "footnote1"> Digital album</p>
               <p className = "footnote2">Streaming + Download</p>
-              {Object.values(tracks).map((track,idx) => <TrackShowItems key={idx} track={track} album={album} artist={artist}/>)}
+              {Object.values(tracks).map((track,idx) => <TrackShowContainer key={idx} track={track}/>)}
           </ol>
           <div className="artist-box-far-right">
             <img className='artist-image' src= {artist.image_file_name}/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {fetchAllArtists,fetchSingleArtist,clearArtists } from '../../actions/artist';
+import {fetchSingleTrack} from '../../actions/track';
 import ArtistShow from './artist_show';
 import {values} from 'lodash';
 

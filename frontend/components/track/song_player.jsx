@@ -13,7 +13,7 @@ class SongPlayer extends React.Component {
     return (
       <ReactHowler
         src={[audioFileName]}
-        playing={playing}
+        playing={true}
       />
   );
   }
