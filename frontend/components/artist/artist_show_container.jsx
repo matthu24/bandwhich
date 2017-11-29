@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {fetchAllArtists,fetchSingleArtist,clearArtists } from '../../actions/artist';
 import {clearCurrentTrack} from '../../actions/track';
+import {changePlayStatus} from '../../actions/track';
 import ArtistShow from './artist_show';
 import {values} from 'lodash';
 
@@ -33,7 +34,9 @@ const mapStateToProps = (state,ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   fetchSingleArtist: (id) => dispatch(fetchSingleArtist(id)),
   clearArtists: () => dispatch(clearArtists()),
-  clearCurrentTrack: () => dispatch(clearCurrentTrack())
+  clearCurrentTrack: () => dispatch(clearCurrentTrack()),
+  changePlayStatus: () => dispatch(changePlayStatus())
+
 });
 
 export default connect(

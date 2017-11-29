@@ -24,7 +24,9 @@ body{
 }
 
 
-
+i:hover{
+  cursor: pointer;
+}
 
 html,body,div{
   /*background-color:#FFFFF0;*/

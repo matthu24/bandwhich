@@ -11,6 +11,7 @@ import SongPlayer from '../track/song_player';
 class ArtistShow extends React.Component {
   constructor(props) {
     super(props);
+    this.playMusic=this.playMusic.bind(this);
   }
 
   //need this to get all my artist info (albums,tracks)
@@ -32,11 +33,23 @@ class ArtistShow extends React.Component {
     this.props.clearCurrentTrack();
   }
 
+  playMusic(){
+      this.props.changePlayStatus();
+  }
+
   render(){
     const artist = this.props.artist;
     const album = this.props.album;
     const tracks = this.props.tracks;
 
+    let mainPlayIcon;
+    if (this.props.playStatus) {
+      mainPlayIcon =
+      <i onClick={this.playMusic} class="fa fa-pause-circle"></i>;
+    } else{
+      mainPlayIcon =
+      <i onClick={this.playMusic} class="fa fa-play-circle"></i>;
+    }
 
     let content;
     if (artist) {
@@ -75,8 +88,11 @@ class ArtistShow extends React.Component {
               <div>{artist.name}</div>
               <p>{artist.genre}</p>
               <div className="music-player">
+                {mainPlayIcon}
                 <div>Now playing: {this.props.currentTrack.title}</div>
                 <progress></progress>
+
+
               </div>
             </div>
           </div>
