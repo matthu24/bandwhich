@@ -47,6 +47,19 @@ class ArtistShow extends React.Component {
 
             {Object.values(album).map((album1,idx) => <AlbumShowItem key={idx} album={album1} artist={artist}/>)}
 
+            <p className= "comment-form-container">
+              <form>
+                <label>Leave a comment:</label>
+                <br/>
+                <textarea className= "comment-form"></textarea>
+                <br/>
+                <button className= "submit-comment">Submit</button>
+              </form>
+              <ul>
+
+              </ul>
+            </p>
+
           </div>
           <ol className= "artist-box-right" >
               <p className = "footnote1"> Digital album</p>
@@ -61,15 +74,22 @@ class ArtistShow extends React.Component {
 
               <div>{artist.name}</div>
               <p>{artist.genre}</p>
+              <div className="music-player">
+                <div>Now playing: {this.props.currentTrack.title}</div>
+                <progress></progress>
+              </div>
             </div>
           </div>
 
         </div>
+
       </div>
+
     }
     return(
-      <div>
+      <div className = "full-album-page">
         {content}
+
       </div>
     );
   }

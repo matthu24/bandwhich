@@ -7,12 +7,14 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :update, :show,:index]
     resources :artists, only: [:create,:update,:show,:index] do
       resources :albums, only: [:index]
+      resources :comments, only: [:create,:update]
     end
     resource :session, only: [:create, :destroy]
     resources :albums, only: [:show, :update, :index] do
       resources :tracks, only: [:index]
     end
     resources :tracks, only: [:show, :update, :index]
+    resources :comments, only: [:destroy]
     # resources :searches, only: [:index, :show]
     # get '/user/:user_id/albums', to: 'albums#select_albums'
   end
