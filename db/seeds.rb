@@ -20,12 +20,14 @@ a1 = Artist.create!(name: "Matthew Hu", genre: "Inspired by the likes of Tchaiko
 a2 = Artist.create!(name: "Harry Liu", genre: "Singer-songwriter from Bay Area, CA. Vibes. Grooves. Jams. Let's go.  These tracks are the culmination of a couple years of work, smiles and laughter from friends from all places, and the support of a very special person. I hope you pick out the love, life, and thoughts in the songs you're about to hear.", image_file_name:"https://i.imgur.com/ha2cGju.jpg")
 a3 = Artist.create!(name: "Melody Hwang", genre: "I consider myself a storyteller who loves using music as a means of changing the world.  Melody Hwang's debut album featuring powerfully expressive songs in a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://i.imgur.com/mMm2gJ8.jpg" )
 a4 = Artist.create!(name: "Edan Lewis", genre: "I made these songs, while working at a hotel in Aomori, Japan; from the confines of room 404.", image_file_name: "https://i.imgur.com/0TaHyLy.jpg")
+a5 = Artist.create!(name: "Zach Bolen", genre: "Earlier this year, Citizens & Saints frontman Zach Bolen released a self-titled, three-song solo EP. The EP was great and showed a different side of Bolen's lyricism; it also served as a teaser for a full-length album. Joining the ranks of the BadChristian roster, Zach Bolen's 1001 is a delightful and surprising rock album that strays from the Citizens & Saints sound in more ways than one. ", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/ZachBolenProfile.png")
 
 # :artist_id,:title,:year,:image_file_name
 al1 = Album.create!(artist_id: a1.id, title: "Paper Dream", year: 2017, image_file_name:"https://i.imgur.com/VFbDBRs.jpg" )
 al2 = Album.create!(artist_id: a2.id, title: "Ninth Street", year: 2017, image_file_name: "https://i.imgur.com/PfOGvOH.jpg")
 al3 = Album.create!(artist_id: a3.id, title: "Suddenly", year: 2015, image_file_name: "https://i.imgur.com/MtOVLwY.jpg" )
 al4 = Album.create!(artist_id: a4.id, title: "The 404 Sessions", year: 2015, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/404Session.png" )
+al5 = Album.create!(artist_id: a5.id, title: "1001", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/1001Album.png" )
 
 
 s1 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Prelude" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/01_Prelude%2Bmastering_1_variant.wav" )
@@ -67,3 +69,5 @@ s32 = Track.create!(artist_id: a4.id , album_id: al4.id , title: "Onsen" , track
 s33 = Track.create!(artist_id: a4.id , album_id: al4.id , title: "Shinjuku Station" , track_num: 6 , audio_file_name: "" )
 s34 = Track.create!(artist_id: a4.id , album_id: al4.id , title: "Sing-a-pore" , track_num: 7 , audio_file_name: "" )
 s35 = Track.create!(artist_id: a4.id , album_id: al4.id , title: "Karoake" , track_num: 8 , audio_file_name: "" )
+
+s36 = Track.create!(artist_id: a5.id , album_id: al5.id , title: "I want to Die" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+I+Want+To+Die.mp3" )
