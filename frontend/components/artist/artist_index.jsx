@@ -54,13 +54,14 @@ class ArtistIndex extends React.Component {
             </div>
           </div>
         </div>
-
+      <div className="artist-box">
         <ul className="artist-index">
           {
             this.props.artists.map((artist,idx) => (
                 <ArtistIndexItem key = {idx} artist={artist}/> ))
           }
         </ul>
+      </div>
       </div>
     );
   }
