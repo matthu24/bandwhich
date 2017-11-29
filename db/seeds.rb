@@ -18,7 +18,7 @@ u1 = User.create!(username: "guest", password: "password")
 #bio: faker::Hipster.paragraph(bio_rand)
 a1 = Artist.create!(name: "Matthew Hu", genre: "Inspired by the likes of Tchaikovsky and good coffee.  From Seattle, WA.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MatthewHuProfile.png" )
 a2 = Artist.create!(name: "Harry Liu", genre: "Singer-songwriter from Bay Area, CA. Vibes. Grooves. Jams. Let's go.  These tracks are the culmination of a couple years of work, smiles and laughter from friends from all places, and the support of a very special person. I hope you pick out the love, life, and thoughts in the songs you're about to hear.", image_file_name:"https://i.imgur.com/ha2cGju.jpg")
-a3 = Artist.create!(name: "Melody Hwang", genre: "I consider myself a storyteller who loves using music as a means of changing the world.", image_file_name: "https://i.imgur.com/mMm2gJ8.jpg" )
+a3 = Artist.create!(name: "Melody Hwang", genre: "I consider myself a storyteller who loves using music as a means of changing the world.  Melody Hwang's debut album featuring powerfully expressive songs in a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://i.imgur.com/mMm2gJ8.jpg" )
 a4 = Artist.create!(name: "Edan Lewis", genre: "I made these songs, while working at a hotel in Aomori, Japan; from the confines of room 404.", image_file_name: "https://i.imgur.com/0TaHyLy.jpg")
 
 # :artist_id,:title,:year,:image_file_name
