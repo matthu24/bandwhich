@@ -12,31 +12,15 @@ class TrackShowItems extends React.Component {
     this.state = {buttonClassName:"play-button"};
   }
 
-  //local playMusic
-  // playMusic(){
-  //   if (this.state.playing === true) {
-  //     this.setState({playing:false});
-  //   } else {
-  //     this.setState({playing:true});
-  //   }
-  // }
-
-
-
 //change playStatus in playMusic if
 //playStatus is currently false
 //OR if currentTrack's id === this.props.track.title
 
   playMusic(){
     this.props.changeCurrentTrack(this.props.track);
-
     if (this.props.playStatus === false || this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name ) {
       this.props.changePlayStatus();
     }
-
-
-
-
   }
 
   changePlayButton(){

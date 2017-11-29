@@ -36,8 +36,7 @@ class ArtistShow extends React.Component {
     const artist = this.props.artist;
     const album = this.props.album;
     const tracks = this.props.tracks;
-    //puts artist's album keys into an array
-    // const albums =this.props.artist.albums;
+
 
     let content;
     if (artist) {
@@ -47,7 +46,7 @@ class ArtistShow extends React.Component {
           <div className = 'artist-box-left' >
 
             {Object.values(album).map((album1,idx) => <AlbumShowItem key={idx} album={album1} artist={artist}/>)}
-            
+
           </div>
           <ol className= "artist-box-right" >
               <p className = "footnote1"> Digital album</p>
