@@ -4,7 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import AlbumShowItem from '../album/album_show_item';
 import TrackShowContainer from '../track/track_show_container';
 import SongPlayer from '../track/song_player';
-
+import CommentFormContainer from '../comment/comment_form_container';
 
 
 
@@ -45,10 +45,10 @@ class ArtistShow extends React.Component {
     let mainPlayIcon;
     if (this.props.playStatus) {
       mainPlayIcon =
-      <i onClick={this.playMusic} class="fa fa-pause-circle"></i>;
+      <i onClick={this.playMusic} className="fa fa-pause-circle"></i>;
     } else{
       mainPlayIcon =
-      <i onClick={this.playMusic} class="fa fa-play-circle"></i>;
+      <i onClick={this.playMusic} className="fa fa-play-circle"></i>;
     }
 
     let content;
@@ -60,18 +60,7 @@ class ArtistShow extends React.Component {
 
             {Object.values(album).map((album1,idx) => <AlbumShowItem key={idx} album={album1} artist={artist}/>)}
 
-            <p className= "comment-form-container">
-              <form>
-                <label>Leave a comment:</label>
-                <br/>
-                <textarea className= "comment-form"></textarea>
-                <br/>
-                <button className= "submit-comment">Submit</button>
-              </form>
-              <ul>
-
-              </ul>
-            </p>
+              <CommentFormContainer artist={artist} />
 
           </div>
           <ol className= "artist-box-right" >

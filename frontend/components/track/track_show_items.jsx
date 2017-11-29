@@ -34,7 +34,7 @@ class TrackShowItems extends React.Component {
       return (
         <li>
           <div className='song-titles' >
-            <i onClick={this.playMusic} class="fa fa-pause-circle"></i>
+            <i onClick={this.playMusic} className="fa fa-pause-circle"></i>
 
             {this.props.track.title}
           </div>
@@ -45,7 +45,7 @@ class TrackShowItems extends React.Component {
         <li>
           <div className='song-titles' >
 
-            <i onClick={this.playMusic} class="fa fa-play-circle"></i>
+            <i onClick={this.playMusic} className="fa fa-play-circle"></i>
 
             {this.props.track.title}
           </div>

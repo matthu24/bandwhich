@@ -48,7 +48,7 @@ li{
 }
 
 
-#bars {
+/*#bars {
     height: 30px;
     left: 50%;
     margin: -30px 0 0 -20px;
@@ -86,4 +86,4 @@ li{
 .bar:nth-child(7)  { left: 25px; animation-duration: 441ms; }
 .bar:nth-child(8)  { left: 29px; animation-duration: 419ms; }
 .bar:nth-child(9)  { left: 33px; animation-duration: 487ms; }
-.bar:nth-child(10) { left: 37px; animation-duration: 442ms; }​
+.bar:nth-child(10) { left: 37px; animation-duration: 442ms; }​*/
