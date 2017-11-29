@@ -88,7 +88,9 @@ class ArtistShow extends React.Component {
               <div>{artist.name}</div>
               <p>{artist.genre}</p>
               <div className="music-player">
-                {mainPlayIcon}
+
+                <div className="main-play-icon">{mainPlayIcon}</div>
+
                 <div>Now playing: {this.props.currentTrack.title}</div>
                 <progress></progress>
 
@@ -110,6 +112,21 @@ class ArtistShow extends React.Component {
     );
   }
 }
+
+
+
+// <div id='bars'>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// <div class='bar'></div>
+// </div>
 
 
 export default ArtistShow;
