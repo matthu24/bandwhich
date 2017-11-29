@@ -1,5 +1,5 @@
 .splash-image{
-width: 100%;
+width: 85%;
 height: 85%;
 }
 
@@ -9,6 +9,8 @@ height: 85%;
 }
 
 .welcome{
-  overflow-y: hidden;
-  height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
