@@ -50,9 +50,16 @@ class CommentForm extends React.Component {
         <div className="comments-list">
           <ul>
           {
-            comments.map(comment =>
+            comments.map((comment,id) =>
               (comment.artist_id === artist.id) ?
-              (<li>{comment.body}</li>) : (<div></div>)
+              (<li key={id} className="comment-body">
+                {comment.body}
+                <br/>
+                <div className="comment-author">
+                  by {comment.comment_author}
+                </div>
+
+              </li>) : (<div></div>)
           )
           }
           </ul>
