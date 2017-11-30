@@ -2,11 +2,7 @@ import React from 'react';
 import ArtistIndexItem from './artist_index_item';
 
 import { Link, Route } from 'react-router-dom';
-// export default () => (
-//   <div className="discover">
-//     <h1>Discover</h1>
-//   </div>
-// );
+
 
 class ArtistIndex extends React.Component {
   constructor(props) {

@@ -12,9 +12,8 @@ class CommentForm extends React.Component {
   componentDidMount() {
     this.props.fetchAllComments(this.props.artist.id);
   }
-  //
+  //this is necessary for handleSubmit to clear form for some reason...
   componentWillReceiveProps(newProps) {
-
     this.setState({body:newProps.comment});
   }
 
@@ -50,7 +49,10 @@ class CommentForm extends React.Component {
     // }
     return (
       <div>
+
+
         <div className="leave-comment">Leave a comment:</div>
+        <br></br>
         <form onSubmit={this.handleSubmit}>
           <label>
             <textarea
@@ -60,7 +62,7 @@ class CommentForm extends React.Component {
               value={this.state.body} />
           </label>
 
-
+          <br></br>
           <input className="comment-submit" type="submit" />
         </form>
 

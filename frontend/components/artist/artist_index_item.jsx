@@ -10,6 +10,7 @@ const ArtistIndexItem = props => {
 
       <Link className = 'artist-name' to={`/artists/${props.artist.id}`}>
         <img className='artist-image' src= {artistImage}/>
+        <br></br>
         {props.artist.name}
         <div className='artist-description'>{props.artist.genre}</div>
       </Link>
