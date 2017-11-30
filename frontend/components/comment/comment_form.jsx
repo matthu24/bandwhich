@@ -1,10 +1,11 @@
 import React from 'react';
+import CommentItem from './comment_item';
 
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.deleteButton=this.deleteButton.bind(this);
+    // this.deleteButton=this.deleteButton.bind(this);
     this.state = {body:""};
   }
 
@@ -13,7 +14,6 @@ class CommentForm extends React.Component {
   }
   //
   componentWillReceiveProps(newProps) {
-
     this.setState({body:newProps.comment});
   }
 
@@ -32,19 +32,15 @@ class CommentForm extends React.Component {
     form.value = "";
   }
 
-  deleteButton(comment) {
-    if(this.props.currentUser.username === comment.comment_author){
-      debugger
-      return(
-        <button onClick = {() => this.props.deleteSingleComment(comment.id)}>Delete</button>
-      );
-    }
-  }
+  // deleteButton(comment) {
+  //   if(this.props.currentUser.username === comment.comment_author){
   //
-  // deleteComment(e){
-  //   e.preventDefault();
-  //   this.props.deleteSingleComment(commentId);
+  //     return(
+  //       <button onClick = {() => this.props.deleteSingleComment(comment.id)}>Delete</button>
+  //     );
+  //   }
   // }
+
 
   render () {
     const { comments,currentUser,artist} = this.props;
@@ -54,9 +50,7 @@ class CommentForm extends React.Component {
     return (
       <div>
         <div className="leave-comment">Leave a comment:</div>
-
         <form onSubmit={this.handleSubmit}>
-
           <label>
             <textarea
               id="comment-form"
@@ -64,24 +58,22 @@ class CommentForm extends React.Component {
               onChange={this.update('body')}
               value={this.state.body} />
           </label>
-          <br></br>
+
+
           <input className="comment-submit" type="submit" />
         </form>
 
         <div className="comments-list">
           <ul>
           {
-            comments.map((comment,id) =>
-              (comment.artist_id === artist.id) ?
-              (<li key={id} className="comment-body">
-                {comment.body}
-                <br/>
-                {this.deleteButton(comment)}
-                <div className="comment-author">
-                  Posted by {comment.comment_author}
-                </div>
-              </li>) : (<div></div>)
-          )
+            comments.map((comment,idx) =>
+              <CommentItem
+                key={idx}
+                comment={comment}
+                artist={artist}
+                deleteComment={this.props.deleteSingleComment}
+                currentUser={currentUser}/>
+            )
           }
           </ul>
         </div>
@@ -91,6 +83,25 @@ class CommentForm extends React.Component {
 }
 
 export default CommentForm;
+
+
+
+
+
+// (comment.artist_id === artist.id) ?
+// (<li key={id} className="comment-body">
+//   {comment.body}
+//   <br/>
+//   {this.deleteButton(comment)}
+//   <div className="comment-author">
+//     Posted by {comment.comment_author}
+//   </div>
+// </li>) : (<div></div>)
+
+
+
+
+
 
 
 // {(comment.user_id === currentUser.id) ?

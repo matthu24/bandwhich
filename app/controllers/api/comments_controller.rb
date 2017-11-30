@@ -8,8 +8,8 @@ class Api::CommentsController < ApplicationController
     # @comment.user_id = current_user.id
     @comment.artist_id = params[:artist_id]
     if @comment.save
-
-      render "/api/comments/show"
+      # render "/api/comments/show"
+      render :show
     else
       render json: @comment.errors.full_messages, status: 401
     end
