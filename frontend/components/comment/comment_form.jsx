@@ -16,7 +16,6 @@ class CommentForm extends React.Component {
   }
 
   update(field) {
-
     return (e) => {
       this.setState({body:e.target.value} );
     };
@@ -27,6 +26,9 @@ class CommentForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createSingleComment(this.state,this.props.artist.id);
+    const form = document.getElementById("comment-form");
+
+    form.value = "";
   }
 
   render () {
@@ -39,6 +41,7 @@ class CommentForm extends React.Component {
 
           <label>
             <textarea
+              id="comment-form"
               className="comment-form"
               onChange={this.update('body')}
               value={this.state.body} />
@@ -56,16 +59,13 @@ class CommentForm extends React.Component {
                 {comment.body}
                 <br/>
                 <div className="comment-author">
-                  by {comment.comment_author}
+                  Posted by {comment.comment_author}
                 </div>
-
               </li>) : (<div></div>)
           )
           }
           </ul>
         </div>
-
-
       </div>
     );
   }
