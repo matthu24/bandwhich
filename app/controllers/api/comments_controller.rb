@@ -21,17 +21,17 @@ class Api::CommentsController < ApplicationController
 
     else
       render json: @comment.errors.full_messages, status: 401
-
     end
   end
 
   def destroy
     @comment = current_user.comments.find(params[:id])
     @comment.destroy
+    render "/api/comments/show"
   end
 
   def comment_params
-    
+
     params.require(:comment).permit(:body)
   end
 

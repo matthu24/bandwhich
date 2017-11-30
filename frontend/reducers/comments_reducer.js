@@ -12,6 +12,7 @@ export default (comments={},action) => {
       return merge({},comments,{[action.comment.id]:action.comment});
       // return action.artist;
     case REMOVE_COMMENT:
+
       let newState = comments;
       delete newState[action.comment.id];
       return newState;

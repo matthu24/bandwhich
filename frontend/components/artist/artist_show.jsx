@@ -56,13 +56,12 @@ class ArtistShow extends React.Component {
       content =
       <div className="artist-page">
         <div className="artist-box">
-          <div className = 'artist-box-left' >
 
+          <div className = 'artist-box-left'>
             {Object.values(album).map((album1,idx) => <AlbumShowItem key={idx} album={album1} artist={artist}/>)}
-
-              <CommentFormContainer artist={artist} />
-
+            <CommentFormContainer artist={artist} />
           </div>
+
           <ol className= "artist-box-right" >
               <p className = "footnote1"> Digital album</p>
               <p className = "footnote2">Streaming + Download</p>
@@ -73,30 +72,24 @@ class ArtistShow extends React.Component {
           <div className="artist-box-far-right">
             <img className='artist-avatar' src= {artist.image_file_name}/>
             <div className="artist-bio">
-
               <div>{artist.name}</div>
               <p>{artist.genre}</p>
               <div className="music-player">
-
+                <div>
                 <div className="main-play-icon">{mainPlayIcon}</div>
-
-                <div>Now playing: {this.props.currentTrack.title}</div>
-                <progress></progress>
-
-
+                Now playing: <br></br> {this.props.currentTrack.title}
+              </div>
+                <img className='sound-wave' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/Soundwave.png" />
               </div>
             </div>
           </div>
 
         </div>
-
-      </div>
-
+      </div>;
     }
     return(
       <div className = "full-album-page">
         {content}
-
       </div>
     );
   }

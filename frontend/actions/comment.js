@@ -31,5 +31,5 @@ export const updateSingleComment = (comment,artistId) => dispatch => {
 }
 
 export const deleteSingleComment = (commentId) => dispatch => {
-  return deleteComment(commentId).then(comment => dispatch(removeComment(comment)));
-}
+  return (deleteComment(commentId).then(comment => dispatch(removeComment(comment))));
+};

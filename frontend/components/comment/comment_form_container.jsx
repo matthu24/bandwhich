@@ -12,7 +12,6 @@ const mapStateToProps = (state,{artist}) => {
   return{
   comments: values(state.entities.comments),
   currentUser: state.session.currentUser,
-
   artist};
 };
 

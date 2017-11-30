@@ -1,6 +1,13 @@
 .comment-form{
   width: 250px;
   height: 100px;
+  box-sizing: border-box;
+    border: 2px solid #ccc;
+}
+
+.leave-comment{
+  margin-top: 30px;
+  font-style: italic;
 }
 
 .comment-form-container{
@@ -9,6 +16,7 @@
 
 .comment-submit{
   width: 50px;
+  margin-left: -2px;
 }
 
 .comment-body{
@@ -22,6 +30,7 @@
   padding-right: 40px;
   margin-top: 20px;
   margin-bottom: 15px;
+
 }
 
 .comment-author{

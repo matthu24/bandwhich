@@ -4,6 +4,7 @@ class CommentForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.deleteButton=this.deleteButton.bind(this);
     this.state = {body:""};
   }
 
@@ -12,6 +13,7 @@ class CommentForm extends React.Component {
   }
   //
   componentWillReceiveProps(newProps) {
+
     this.setState({body:newProps.comment});
   }
 
@@ -27,15 +29,31 @@ class CommentForm extends React.Component {
     e.preventDefault();
     this.props.createSingleComment(this.state,this.props.artist.id);
     const form = document.getElementById("comment-form");
-
     form.value = "";
   }
 
+  deleteButton(comment) {
+    if(this.props.currentUser.username === comment.comment_author){
+      debugger
+      return(
+        <button onClick = {() => this.props.deleteSingleComment(comment.id)}>Delete</button>
+      );
+    }
+  }
+  //
+  // deleteComment(e){
+  //   e.preventDefault();
+  //   this.props.deleteSingleComment(commentId);
+  // }
+
   render () {
     const { comments,currentUser,artist} = this.props;
+    // if (comments.length ===0) {
+    //   return null;
+    // }
     return (
       <div>
-        <div>Leave a comment:</div>
+        <div className="leave-comment">Leave a comment:</div>
 
         <form onSubmit={this.handleSubmit}>
 
@@ -46,7 +64,7 @@ class CommentForm extends React.Component {
               onChange={this.update('body')}
               value={this.state.body} />
           </label>
-
+          <br></br>
           <input className="comment-submit" type="submit" />
         </form>
 
@@ -58,12 +76,10 @@ class CommentForm extends React.Component {
               (<li key={id} className="comment-body">
                 {comment.body}
                 <br/>
+                {this.deleteButton(comment)}
                 <div className="comment-author">
                   Posted by {comment.comment_author}
                 </div>
-                {(comment.user_id === currentUser.id) ?
-                (<button className="delete-form">Delete</button>) :
-                (<div></div>)}
               </li>) : (<div></div>)
           )
           }
@@ -75,3 +91,8 @@ class CommentForm extends React.Component {
 }
 
 export default CommentForm;
+
+
+// {(comment.user_id === currentUser.id) ?
+// (<button className="delete-form" onClick={() =>this.props.deleteSingleComment(comment.id)}>Delete</button>) :
+// (<div></div>)}
