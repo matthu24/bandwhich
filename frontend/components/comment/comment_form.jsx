@@ -61,6 +61,9 @@ class CommentForm extends React.Component {
                 <div className="comment-author">
                   Posted by {comment.comment_author}
                 </div>
+                {(comment.user_id === currentUser.id) ?
+                (<button className="delete-form">Delete</button>) :
+                (<div></div>)}
               </li>) : (<div></div>)
           )
           }
