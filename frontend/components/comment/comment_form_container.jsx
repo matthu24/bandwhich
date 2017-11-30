@@ -9,7 +9,7 @@ import {values} from 'lodash';
 const mapStateToProps = (state,{artist}) => {
 
   return{
-  comments: (state.entities.comments),
+  comments: values(state.entities.comments),
   currentUser: state.session.currentUser,
   artist};
 };

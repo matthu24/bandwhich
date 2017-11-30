@@ -22,13 +22,15 @@ class CommentForm extends React.Component {
     };
   }
 
+  //create singlecomment takes the comment object => {body: "sdfd"} which is what the local state is set as
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.createSingleComment(this.state,this.props.artist.id);
   }
 
   render () {
-
+    const { comments,currentUser,artist} = this.props;
     return (
       <div>
         <div>Leave a comment:</div>
@@ -44,6 +46,16 @@ class CommentForm extends React.Component {
 
           <input className="comment-submit" type="submit" />
         </form>
+
+        <div className="comments-list">
+          <ul>
+          {
+            comments.map(comment => <li>{comment.body}</li>)
+          }
+          </ul>
+        </div>
+
+
       </div>
     );
   }
