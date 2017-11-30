@@ -48,7 +48,7 @@ class ArtistShow extends React.Component {
       <i onClick={this.playMusic} className="fa fa-pause-circle"></i>;
     } else{
       //this means play status is false, nothing is playing
-      
+
       mainPlayIcon =
       <i onClick={this.playMusic} className="fa fa-play-circle"></i>;
     }
@@ -70,8 +70,8 @@ class ArtistShow extends React.Component {
 
             <div className="music-player">
               <div>
-              <div className="main-play-icon">{mainPlayIcon}</div>
-              Now playing: <br></br> {this.props.currentTrack.title}
+              <div className="main-play-icon">{mainPlayIcon} {this.props.currentTrack.title}</div>
+            
             </div>
               <img className='sound-wave' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/Soundwave.png" />
             </div>
