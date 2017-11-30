@@ -47,6 +47,8 @@ class ArtistShow extends React.Component {
       mainPlayIcon =
       <i onClick={this.playMusic} className="fa fa-pause-circle"></i>;
     } else{
+      //this means play status is false, nothing is playing
+      
       mainPlayIcon =
       <i onClick={this.playMusic} className="fa fa-play-circle"></i>;
     }
@@ -63,24 +65,28 @@ class ArtistShow extends React.Component {
           </div>
 
           <ol className= "artist-box-right" >
+
+            {<SongPlayer playing={this.props.playStatus} audio={this.props.currentTrack.audio_file_name}/>}
+
+            <div className="music-player">
+              <div>
+              <div className="main-play-icon">{mainPlayIcon}</div>
+              Now playing: <br></br> {this.props.currentTrack.title}
+            </div>
+              <img className='sound-wave' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/Soundwave.png" />
+            </div>
+
               <p className = "footnote1"> Digital album</p>
               <p className = "footnote2">Streaming + Download</p>
               {Object.values(tracks).map((track,idx) => <TrackShowContainer key={idx} track={track}/>)}
           </ol>
-          {<SongPlayer playing={this.props.playStatus} audio={this.props.currentTrack.audio_file_name}/>}
 
           <div className="artist-box-far-right">
             <img className='artist-avatar' src= {artist.image_file_name}/>
             <div className="artist-bio">
               <div>{artist.name}</div>
               <p>{artist.genre}</p>
-              <div className="music-player">
-                <div>
-                <div className="main-play-icon">{mainPlayIcon}</div>
-                Now playing: <br></br> {this.props.currentTrack.title}
-              </div>
-                <img className='sound-wave' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/Soundwave.png" />
-              </div>
+
             </div>
           </div>
 
