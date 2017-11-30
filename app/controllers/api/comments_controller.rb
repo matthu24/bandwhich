@@ -30,7 +30,8 @@ class Api::CommentsController < ApplicationController
     @comment.destroy
   end
 
-  def user_params
+  def comment_params
+    debugger
     params.require(:comment).permit(:body)
   end
 

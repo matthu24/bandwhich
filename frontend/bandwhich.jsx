@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {fetchAllArtists,fetchSingleArtist} from './actions/artist';
 import {fetchSingleTrack} from './actions/track';
+import {createComment} from './utils/comment_util';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
@@ -24,5 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
       window.fetchAllArtists= fetchAllArtists;
       window.fetchSingleArtist = fetchSingleArtist;
       window.fetchSingleTrack = fetchSingleTrack;
+      window.createComment=createComment;
     ReactDOM.render(<Root store={store}/>, root);
 });

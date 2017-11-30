@@ -4,27 +4,27 @@ class CommentForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {body:""};
   }
 
-  // componentDidMount() {
-  //   if (this.props.match.params.commentId) {
-  //     this.props.fetchPost(this.props.match.params.commentId);
-  //   }
-  // }
+  componentDidMount() {
+    this.props.fetchAllComments(this.props.artist.id);
+  }
   //
-  // componentWillReceiveProps(newProps) {
-  //   this.setState(newProps.comment);
-  // }
+  componentWillReceiveProps(newProps) {
+    this.setState({body:newProps.comment});
+  }
 
   update(field) {
+
     return (e) => {
-      this.setState({[field]: e.target.value});
+      this.setState({body:e.target.value} );
     };
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createSingleComment(this.state.comment);
+    this.props.createSingleComment(this.state,this.props.artist.id);
   }
 
   render () {
@@ -38,7 +38,8 @@ class CommentForm extends React.Component {
           <label>
             <textarea
               className="comment-form"
-              onChange={this.update('body')} />
+              onChange={this.update('body')}
+              value={this.state.body} />
           </label>
 
           <input className="comment-submit" type="submit" />

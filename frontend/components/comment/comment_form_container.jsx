@@ -6,10 +6,13 @@ import CommentForm from './comment_form';
 import {values} from 'lodash';
 
 //track is like ownprops destructured
-const mapStateToProps = (state) => ({
-  comments: values(state.entities.comments),
-  currentUser: state.session.currentUser
-});
+const mapStateToProps = (state,{artist}) => {
+
+  return{
+  comments: (state.entities.comments),
+  currentUser: state.session.currentUser,
+  artist};
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchAllComments: (artistId) => dispatch(fetchAllComments(artistId)),

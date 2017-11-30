@@ -12,6 +12,7 @@ Artist.destroy_all
 Album.destroy_all
 Track.destroy_all
 
+
 u1 = User.create!(username: "guest", password: "password")
 
 #bio_rand = rand(1) + 1

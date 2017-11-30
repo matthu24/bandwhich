@@ -7,6 +7,7 @@ export const fetchArtistComments = (artistId) => {
 };
 
 export const createComment = (comment,artistId) => {
+
   return $.ajax({
     method: "POST",
     url: `/api/artists/${artistId}/comments`,
@@ -16,7 +17,7 @@ export const createComment = (comment,artistId) => {
 
 export const updateComment = (comment,artistId) => {
   return $.ajax({
-    method: "POST",
+    method: "PATCH",
     url: `/api/artists/${artistId}/comments`,
     data: {comment}
   });
