@@ -14,6 +14,7 @@ class CommentForm extends React.Component {
   }
   //
   componentWillReceiveProps(newProps) {
+
     this.setState({body:newProps.comment});
   }
 

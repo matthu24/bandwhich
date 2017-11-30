@@ -13,9 +13,9 @@ const receiveComments = comments => ({
   comments
 });
 
-const removeComment = commentId => ({
+const removeComment = comment => ({
   type: REMOVE_COMMENT,
-  commentId
+  comment
 });
 
 export const fetchAllComments = artistId => dispatch => {

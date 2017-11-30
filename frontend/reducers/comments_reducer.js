@@ -13,7 +13,7 @@ export default (comments={},action) => {
       // return action.artist;
     case REMOVE_COMMENT:
 
-      let newState = comments;
+      let newState = merge({},comments);
       delete newState[action.comment.id];
       return newState;
     default:
