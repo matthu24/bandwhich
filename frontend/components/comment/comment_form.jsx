@@ -50,6 +50,20 @@ class CommentForm extends React.Component {
     return (
       <div>
 
+        <div className="comments-list">
+          <ul>
+          {
+            comments.map((comment,idx) =>
+              <CommentItem
+                key={idx}
+                comment={comment}
+                artist={artist}
+                deleteComment={this.props.deleteSingleComment}
+                currentUser={currentUser}/>
+            )
+          }
+          </ul>
+        </div>
 
         <div className="leave-comment">Leave a comment:</div>
         <br></br>
@@ -66,20 +80,7 @@ class CommentForm extends React.Component {
           <input className="comment-submit" type="submit" />
         </form>
 
-        <div className="comments-list">
-          <ul>
-          {
-            comments.map((comment,idx) =>
-              <CommentItem
-                key={idx}
-                comment={comment}
-                artist={artist}
-                deleteComment={this.props.deleteSingleComment}
-                currentUser={currentUser}/>
-            )
-          }
-          </ul>
-        </div>
+
       </div>
     );
   }
