@@ -39,10 +39,9 @@ A simple Rails authentication pattern was implemented for this app.  Users can s
 
 Users can navigate artist pages to view albums and tracks using the discover page.  Each track is individually playable; or users can start from the beginning of the album using the main play button at the top!  Tracks can pause and restart where they left off, as the current song is saved to the state of the app.
 
-
 ### Comments
 
-Users can leave comments/reviews on artist pages.  Deleting comments are only available to the user that authored the comment.
+Users can leave comments/reviews on artist pages.  Deleting comments are only available to the user that authored the comment.  
 
 ## Challenges 
 
@@ -90,10 +89,25 @@ render () {
 
 ```
 
+### Comments 
 
-### Comments
+Comments required a joins table between users and artists.  Accessing comments' authors required utilizing the association on the back-end and sending it to the front as json via "comment_author'.  
 
+```ruby
+  json.extract! @comment, :id, :body, :user_id, :artist_id
+  json.comment_author @comment.user.username
+```
 
+```javascript
+    <div className="comment-author">
+      Posted by {comment.comment_author}
+    </div>
+    {
+    (comment.user_id === currentUser.id) ?
+    (<button className="delete-form" onClick={()=>deleteComment(comment.id)}>Delete</button>) :
+    (<div></div>)
+    }
+```
 
 ## Future Directions
 
