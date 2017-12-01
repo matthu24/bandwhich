@@ -1,13 +1,10 @@
 import React from 'react';
 import ArtistIndexItem from './artist_index_item';
-
 import { Link, Route } from 'react-router-dom';
-
 
 class ArtistIndex extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   //this is what changes the state and gets all the artists to fill the artist slice of state
@@ -17,7 +14,6 @@ class ArtistIndex extends React.Component {
   }
 
   render(){
-
     //this is so that I have access to artists after first render
     //return null on first render when artists array is empty
     if (this.props.artists.length === 0) return null;
