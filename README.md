@@ -33,11 +33,11 @@ Bandwhich is a music app developed for users to discover music by local independ
 
 A simple Rails authentication pattern was implemented for this app.  Users can sign up for an account, and can log in using the same password credentials. Demo login is also available so that signup isn't necessary.
 
-### Music Streaming 
-
-Users can navigate artist pages to view albums and tracks using the discover page.  Each track is individually playable; or users can start from the beginning of the album using the main play button at the top!  Tracks can pause and restart where they left off, as the current song is saved to the state of the app.
+### Artist Show and Music Streaming 
 
 <img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot4.png"/>
+
+Users can navigate artist pages to view albums and tracks using the discover page.  Each track is individually playable; or users can start from the beginning of the album using the main play button at the top!  Tracks can pause and restart where they left off, as the current song is saved to the state of the app.
 
 
 ### Comments
@@ -64,7 +64,7 @@ Two things need to exist in the state shape in order for streaming music to work
   }
 ```
 
-The CSS used for play and pause also relied on these two state attributes.  If the play status is true, and the track matches the current track name, then a pause circle is rendered for that particular track; otherwise, a play button renders as the default button.
+The CSS used for play and pause also relied on these two state attributes.  If the play status is true and the track matches the current track name, then a pause circle is rendered for that particular track; otherwise, a play button renders as the default button.
 
 ```javascript
 render () {
@@ -99,9 +99,11 @@ render () {
 
 ### Search 
 
+I intend to implement a search feature to search artists.
+
 ### Playlists
 
-
+Users can browse songs and create their own custom playlists.  Users will then have their own user page with a list of playlists, and be able to navigate to each individual playlist to show the tracks. 
 
 
 
