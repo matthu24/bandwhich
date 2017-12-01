@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+##Overview 
+
+Bandwhich is a music app designed for users to discover music by local independant singer-songwriters.  
+It is written with a rails backend and react frontend and uses Bandcamp (bandcamp.com) as a design inspiration.
+
