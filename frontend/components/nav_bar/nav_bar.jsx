@@ -19,7 +19,7 @@ class NavBar extends React.Component {
     const navContent = this.props.currentUser ? (
       <div>
         <div>Hi {this.props.currentUser.username}</div>
-        <NavLink activeClassName="active" to='/artists'>Discover</NavLink>
+        <NavLink to='/artists' exact={true} activeStyle={{ textDecoration: 'underline' }}>Discover</NavLink>
         <div><a href="#" onClick={this.props.logout}>Log Out</a></div>
       </div>
     ) : (
@@ -32,7 +32,7 @@ class NavBar extends React.Component {
     return (
       <header className="nav-bar">
         <div className="left-nav">
-          <Link to='/artists'><img className='logo' src="https://i.imgur.com/gHgI8rt.jpg"/></Link>
+          <Link to='/artists'><img className='logo' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/BandwhichLogo.png"/></Link>
         </div>
         <div className="right-nav">  {navContent}</div>
       </header>
