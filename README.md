@@ -37,13 +37,16 @@ A simple Rails authentication pattern was implemented for this app.  Users can s
 
 Users can navigate artist pages to view albums and tracks using the discover page.  Each track is individually playable; or users can start from the beginning of the album using the main play button at the top!  Tracks can pause and restart where they left off, as the current song is saved to the state of the app.
 
+<img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot2.png"/>
+
+
 ### Comments
 
 Users can leave comments/reviews on artist pages.  Deleting comments are only available to the user that authored the comment.
 
 ## Challenges 
 
-### Song selection and play
+### Song Selection and Play
 
 <img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot1.png"/>
 
