@@ -37,7 +37,7 @@ A simple Rails authentication pattern was implemented for this app.  Users can s
 
 Users can navigate artist pages to view albums and tracks using the discover page.  Each track is individually playable; or users can start from the beginning of the album using the main play button at the top!  Tracks can pause and restart where they left off, as the current song is saved to the state of the app.
 
-<img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot2.png"/>
+<img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot3.png"/>
 
 
 ### Comments
