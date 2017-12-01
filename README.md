@@ -61,7 +61,7 @@ Users can leave comments/reviews on artist pages.  Deleting comments are only av
 ### Song streaming
 
 
-<img height="450px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot1.png"/>
+<img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot1.png"/>
 
 
 ```javascript
