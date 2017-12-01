@@ -13,16 +13,41 @@ class SongPlayer extends React.Component {
     this.setState({playing:false});
   }
 
+//   getHowler () {
+//   this.player.howler
+// }
+
+
+//progress bar
+//<input type="range">
+//set interval every 500 ms to get position
+
+  getDuration () {
+    this.player.duration();
+  }
+
+  //get the position of playback
+  getSeek () {
+    this.player.seek();
+  }
+
+  //set the position of playback
+  setSeek () {
+    this.player.seek(0.5);
+  }
+
   render () {
 
     const audioFileName = this.props.audio;
-    console.log(audioFileName);
+    // console.log(this.getDuration);
     if(audioFileName === "") return null;
 
     const playing = this.props.playing;
     return (
       <div>
+      
       <ReactHowler
+        ref={(ref) => (this.player=ref)}
         src={[audioFileName]}
         playing={this.props.playing}
       />
