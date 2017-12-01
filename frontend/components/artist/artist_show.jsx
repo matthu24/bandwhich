@@ -66,12 +66,12 @@ class ArtistShow extends React.Component {
 
           <ol className= "artist-box-right" >
 
-            {<SongPlayer playing={this.props.playStatus} audio={this.props.currentTrack.audio_file_name}/>}
+            {<SongPlayer playing={this.props.playStatus} currentTrack={this.props.currentTrack} audio={this.props.currentTrack.audio_file_name}/>}
 
             <div className="music-player">
               <div>
               <div className="main-play-icon">{mainPlayIcon} {this.props.currentTrack.title}</div>
-            
+
             </div>
               <img className='sound-wave' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/Soundwave.png" />
             </div>

@@ -5,7 +5,9 @@ class SongPlayer extends React.Component {
   // This sound file may not work due to cross-origin setting
   constructor(props){
     super(props);
-    this.state = {playing: true};
+    // this.state = {playing: true};
+    this.state = {progress:0};
+    this.player = null;
     this.handlePause = this.handlePause.bind(this);
   }
 
@@ -37,20 +39,31 @@ class SongPlayer extends React.Component {
   }
 
   render () {
+    let howler;
+    howler = (
+      <ReactHowler
+        ref={(ref) => (this.player = ref)}
+        src={[audioFileName]}
+        playing={this.props.playing}
+
+      />
+    );
+
+
 
     const audioFileName = this.props.audio;
-    // console.log(this.getDuration);
+
     if(audioFileName === "") return null;
 
     const playing = this.props.playing;
     return (
       <div>
-      
-      <ReactHowler
-        ref={(ref) => (this.player=ref)}
-        src={[audioFileName]}
-        playing={this.props.playing}
-      />
+        <ReactHowler
+          ref={(ref) => (this.player=ref)}
+          src={[audioFileName]}
+          playing={this.props.playing}
+        />
+
     </div>
   );
   }
