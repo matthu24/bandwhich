@@ -54,21 +54,35 @@ where they left off, as the current song is saved to the state of the app.
 
 ### Comments
 
-Users can leave comments/reviews on artist pages.  Deleting comments are only available to the user that posted the comment.
+Users can leave comments/reviews on artist pages.  Deleting comments are only available to the user that authored the comment.
 
 ## Challenges 
 
 ### Song streaming
 
-
 <img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot1.png"/>
+
+Two things need to exist in the state shape in order for streaming music to work properly.  
+
+The first is a boolean play status: true meaning a song is playing and false meaning it is on pause. 
+
+The second is a current track.  Each time an artist is first shown, the first song on the artist's album is automatically
+
+loaded into the state's current track, and the play status also defaults to false.  At this point, each individual
+
+track's play button will trigger a change in the play status, as well as the current track, if it doesn't happen to be the
+
+current one at the time.  
 
 
 ```javascript
-handlePlay (e) {
-  let playButton = document.getElementById('playing');
-  if (playButton) {playButton.textContent = "||";}
-}
+  playMusic(){
+    this.props.changeCurrentTrack(this.props.track);
+    if (this.props.playStatus === false || 
+      this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name ) {
+      this.props.changePlayStatus();
+    }
+  }
 ```
 
 ### Comments
