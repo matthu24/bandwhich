@@ -13,7 +13,7 @@ Album.destroy_all
 Track.destroy_all
 
 
-u1 = User.create!(username: "guest", password: "password")
+u1 = User.create!(username: "Guest", password: "password")
 
 #bio_rand = rand(1) + 1
 #bio: faker::Hipster.paragraph(bio_rand)

@@ -76,7 +76,7 @@ class ArtistShow extends React.Component {
               <img className='sound-wave' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/Soundwave.png" />
             </div>
 
-              <p className = "footnote1"> Digital album</p>
+              <p className = "footnote1"> Digital Album</p>
               <p className = "footnote2">Streaming + Download</p>
               {Object.values(tracks).map((track,idx) => <TrackShowContainer key={idx} track={track}/>)}
           </ol>
