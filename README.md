@@ -43,7 +43,7 @@ Users can leave comments/reviews on artist pages.  Deleting comments are only av
 
 ## Challenges 
 
-### Song streaming
+### Song selection and play
 
 <img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot1.png"/>
 
