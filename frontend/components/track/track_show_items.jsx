@@ -18,7 +18,8 @@ class TrackShowItems extends React.Component {
 
   playMusic(){
     this.props.changeCurrentTrack(this.props.track);
-    if (this.props.playStatus === false || this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name ) {
+    if (this.props.playStatus === false ||
+      this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name ) {
       this.props.changePlayStatus();
     }
   }
@@ -35,7 +36,6 @@ class TrackShowItems extends React.Component {
         <li>
           <div className='song-titles' >
             <i onClick={this.playMusic} className="fa fa-pause-circle"></i>
-
             {this.props.track.title}
           </div>
         </li>
@@ -44,9 +44,7 @@ class TrackShowItems extends React.Component {
       return (
         <li>
           <div className='song-titles' >
-
             <i onClick={this.playMusic} className="fa fa-play-circle"></i>
-
             {this.props.track.title}
           </div>
         </li>
