@@ -80,6 +80,22 @@ with a class attribute containing 'col-' */
   display:flex;
   justify-content: center;
 }
+
+.artist-box::after{
+
+
+  content: "";
+  // background: url(image.jpg);
+  background: url("https://s3-us-west-1.amazonaws.com/fullstackfiles/BackgroundImage.png");
+  opacity: 0.25;
+  top: 90px;
+  left: 0px;
+  bottom: -150px;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 .artist-box{
   // background-color: beige;
   // padding-bottom: 50px;
@@ -89,7 +105,7 @@ with a class attribute containing 'col-' */
   padding: 50px;
     // padding-right: 600px;
 
-    padding-left: -60px;
+  padding-left: -60px;
   margin: 10px;
   width: 100%;
   display:flex;
