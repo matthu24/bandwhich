@@ -50,7 +50,7 @@ class ArtistIndex extends React.Component {
             </div>
           </div>
         </div>
-      <div className="artist-box">
+      <div className="artist-index-box">
         <ul className="artist-index">
           {
             this.props.artists.map((artist,idx) => (

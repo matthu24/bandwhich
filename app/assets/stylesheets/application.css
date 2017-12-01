@@ -14,9 +14,13 @@
  *= require_self
  */
 
+link:active{
+  text-decoration: underline;
+}
 
 body{
   margin:0;
+  background-color: lightgray;
 }
 
 
