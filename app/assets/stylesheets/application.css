@@ -14,7 +14,7 @@
  *= require_self
  */
 
-link:active{
+.active{
   text-decoration: underline;
 }
 
