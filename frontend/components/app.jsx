@@ -15,8 +15,6 @@ import Spotlight from './spotlight/spotlight_index_container';
 //once loggedin, component receives new props and is redirected to /splash
 const App = () => (
   <div>
-
-
       <Route path="/" component={NavBarContainer}/>
         <Switch>
         <AuthRoute path="/guest" component={LoginContainer} />

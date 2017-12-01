@@ -2,26 +2,19 @@ import React, { Component } from 'react';
 import ReactHowler from 'react-howler';
 
 class SongPlayer extends React.Component {
-  // This sound file may not work due to cross-origin setting
+
   constructor(props){
     super(props);
-    // this.state = {playing: true};
     this.state = {duration:0};
     this.getDuration= this.getDuration.bind(this);
     this.getSeek = this.getSeek.bind(this);
     this.formatTime=this.formatTime.bind(this);
-    // this.player = null;
     this.handlePause = this.handlePause.bind(this);
   }
 
   handlePause(){
     this.setState({playing:false});
   }
-
-//   getHowler () {
-//   this.player.howler
-// }
-
 
 //progress bar
 //<input type="range">
@@ -53,24 +46,16 @@ this.setState({duration: this.player.duration()});
 }
 
   render () {
-
     const audioFileName = this.props.audio;
-
     if(audioFileName === "") return null;
-
     const playing = this.props.playing;
     return (
       <div>
         <ReactHowler
-          preload='true'
           ref={(ref) => (this.player=ref)}
-          onLoad={this.handleOnLoad}
           src={[audioFileName]}
           playing={this.props.playing}
         />
-
-      <div>{this.formatTime(this.state.duration)}</div>
-
     </div>
   );
   }

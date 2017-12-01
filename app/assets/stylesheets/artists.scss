@@ -1,8 +1,6 @@
 .artist-image{
   width: 180px;
   height: 160px;
-  // width: 80%;
-  // height: 80%;
   // border: 1px solid black;
 }
 
@@ -13,12 +11,9 @@
 
 .artist-index{
   display:flex;
-  // justify-content: space-around;
   justify-content: center;
   flex-wrap:wrap;
-  // align-items: center;
   width:85%;
-  // align-content: center;
   margin:0 auto;
   // border:1px solid red;
 }
@@ -56,7 +51,3 @@
 .artist-page{
   // background-color: #F0F8FF
 }
-
-// .artist-name:hover{
-//   text-decoration: underline;
-// }

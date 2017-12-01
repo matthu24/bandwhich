@@ -27,13 +27,7 @@ with a class attribute containing 'col-' */
 }
 .col-1-2{
   width: 50%;
-
 }
-
-// .album-show{
-//   display:flex;
-//
-// }
 
 .album-image{
   // width: 350px;
@@ -97,30 +91,22 @@ with a class attribute containing 'col-' */
 }
 
 .artist-box{
-  // background-color: beige;
-  // padding-bottom: 50px;
-  // padding-top: 30px;
-  // padding-left: 120px;
-  // padding-right: 30px;
-  padding: 50px;
-    // padding-right: 600px;
 
+  padding: 50px;
   padding-left: -60px;
   margin: 10px;
   width: 100%;
   display:flex;
   justify-content: center;
-  // border: 1px solid black;
+
   }
 
   .artist-box-left{
     width: 400px;
-    // margin-right: 50px;
     // border: 1px solid black;
   }
 
   .artist-box-right{
-    // padding-left: 400px;
     // border: 1px solid black;
     padding-left: 30px;
     padding-right: 30px;
@@ -134,36 +120,8 @@ with a class attribute containing 'col-' */
     padding-top: 40px;
     margin-top: -10px;
     width: 17%;
-
   }
 
   .music-player{
     margin-top: 60px;
-
-
   }
-
-
-
-
-
-
-
-// .album-index{
-//   display:flex;
-//   justify-content: space-around;
-//   align-items: center;
-// }
-
-// .tracks-show{
-//   display:flex;
-//   align-items: center;
-//   text-align: center;
-// }
-//
-// .album-show{
-//   display:flex;
-//   flex-direction: column;
-//   align-items: center;
-//   text-align: center;
-// }

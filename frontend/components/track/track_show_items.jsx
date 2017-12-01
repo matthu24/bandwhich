@@ -56,9 +56,4 @@ class TrackShowItems extends React.Component {
   }
 }
 
-
-// <button onClick={this.playMusic} className={"pause-button"}></button>
-// <button onClick={this.playMusic} className={"play-button"}></button>
-
-
 export default TrackShowItems;

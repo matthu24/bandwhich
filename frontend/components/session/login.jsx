@@ -20,8 +20,6 @@ class Login extends React.Component {
     this.props.login(user);
   }
 
-
-
   renderErrors(){
     const errors = this.props.errors ? (
       <ul>{
@@ -33,7 +31,6 @@ class Login extends React.Component {
       <div>
         {errors}
       </div>
-
     );
   }
 
@@ -57,33 +54,27 @@ class Login extends React.Component {
     return(
       <div>
 
+        <form className="login-form">
+          <h3>Log In</h3>
 
-      <form className="login-form">
-        <h3>Log In</h3>
+          <label htmlFor="username">Username
+            <input type="text" value={this.state.username} onChange={this.update("username")}/>
+          </label>
 
-        <label htmlFor="username">Username
-          <input type="text" value={this.state.username} onChange={this.update("username")}/>
-        </label>
+          <br/>
+          <label htmlFor="password">Password
+            <input type="password" value={this.state.password} onChange={this.update("password")}/>
+          </label>
 
-        <br/>
-        <label htmlFor="password">Password
-          <input type="password" value={this.state.password} onChange={this.update("password")}/>
-        </label>
-
-        <br/>
-        <button className="login-button" onClick={this.handleSubmit}>Log in</button>
-        <Link to='/signup'className='alt-signup'>Or sign up!</Link>
-        <div className="session-errors">{this.renderErrors()}</div>
-
-    </form>
-
+          <br/>
+          <button className="login-button" onClick={this.handleSubmit}>Log in</button>
+          <Link to='/signup'className='alt-signup'>Or sign up!</Link>
+          <div className="session-errors">{this.renderErrors()}</div>
+        </form>
 
       </div>
     );
-
   }
-
-
 }
 
 export default withRouter(Login);

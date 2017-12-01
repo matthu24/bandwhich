@@ -38,6 +38,5 @@ class NavBar extends React.Component {
     );
   }
 }
-//bandcamps logo
-// http://www.drunkenwerewolf.com/wp-content/uploads/2017/04/Bandcamp.png
+
 export default NavBar;

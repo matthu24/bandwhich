@@ -19,7 +19,7 @@ class ArtistShow extends React.Component {
     this.props.fetchSingleArtist(this.props.match.params.artistId);
   }
 
-  //I might only need this if my artist index page was still rendering
+  //only need this if my artist index page was still rendering
   //even after clicking on an artist show
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.artistId !== newProps.match.params.artistId) {

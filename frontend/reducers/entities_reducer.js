@@ -14,5 +14,3 @@ export default combineReducers({
   tracks: tracksReducer,
   comments: commentsReducer
 });
-
-// export default entitiesReducers;
