@@ -69,7 +69,6 @@ this.setState({duration: this.player.duration()});
           playing={this.props.playing}
         />
 
-      <div>{this.formatTime(this.state.duration)}</div>
 
     </div>
   );
