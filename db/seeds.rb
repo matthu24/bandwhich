@@ -22,6 +22,7 @@ a2 = Artist.create!(name: "Harry Liu", genre: "Singer-songwriter from Bay Area, 
 a3 = Artist.create!(name: "Melody Hwang", genre: "Melody Hwang's debut album featuring powerfully expressive songs in a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MelodyHwangProfile.png" )
 a4 = Artist.create!(name: "Edan Lewis", genre: "I made these songs, while working at a hotel in Aomori, Japan; from the confines of room 404.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/EdanLewisProfile.png")
 a5 = Artist.create!(name: "Zach Bolen", genre: "Joining the ranks of the BadChristian roster, Zach Bolen's 1001 is a delightful and surprising rock album that strays from the Citizens & Saints sound in more ways than one. ", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/ZachBolenProfile.png")
+a6 = Artist.create!(name: "Linus", genre: "The best friend of Charlie Brown, and the proud co-author of Paper Dream.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream4.png" )
 
 # :artist_id,:title,:year,:image_file_name
 al1 = Album.create!(artist_id: a1.id, title: "Paper Dream", year: 2017, image_file_name:"https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream.png" )
@@ -29,6 +30,7 @@ al2 = Album.create!(artist_id: a2.id, title: "Ninth Street", year: 2017, image_f
 al3 = Album.create!(artist_id: a3.id, title: "Suddenly", year: 2015, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Suddenly.png" )
 al4 = Album.create!(artist_id: a4.id, title: "The 404 Sessions", year: 2015, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/404Session.png" )
 al5 = Album.create!(artist_id: a5.id, title: "1001", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/1001Album.png" )
+al6 = Album.create!(artist_id: a6.id, title: "Christmas Single", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Chrismtas.png" )
 
 
 s1 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Prelude" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/01_Prelude%2Bmastering_1_variant.wav" )
@@ -71,3 +73,4 @@ s33 = Track.create!(artist_id: a4.id , album_id: al4.id , title: "Shinjuku Stati
 s34 = Track.create!(artist_id: a4.id , album_id: al4.id , title: "Sing-a-pore" , track_num: 7 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/07-Sing-a-pore.mp3" )
 
 s36 = Track.create!(artist_id: a5.id , album_id: al5.id , title: "I want to Die" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+I+Want+To+Die.mp3" )
+s37 = Track.create!(artist_id: a6.id , album_id: al6.id , title: "What Child Is This" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/What+Child+Is.mp3" )
