@@ -47,7 +47,9 @@ Users can leave comments/reviews on artist pages.  Deleting comments are only av
 
 <img height="200px" width="350px" src="https://s3-us-west-1.amazonaws.com/fullstackfiles/ReadMeScreenshot1.png"/>
 
-Two things need to exist in the state shape in order for streaming music to work properly. The first is a boolean play status: true meaning a song is playing and false meaning it is on pause. The second is a current track.  Each time an artist is first shown, the first song on the artist's album is automatically loaded into the state's current track, and the play status also defaults to false.  At this point, each individual track's play button will trigger a change in the play status, as well as the current track (however, clicking on a track will not change the current track state if the track is already the current one).  Once a track starts playing (the play status has changed to true), the play status does not change if other tracks are played subsequently, i.e. the play status continues to be true as you click on different tracks. Only when you click on a track twice in a row does the play status render false.  Below if a snippet of the logic described above. 
+A bit of interesting logic was required to pull off a seamless streaming and song selection experience for the user.  
+
+Two things need to exist in the state shape in order for streaming music to work properly. The first is a boolean play status: true meaning a song is playing and false meaning it is on pause. The second is a current track.  Each time an artist is first shown, the first song on the artist's album is automatically loaded into the state's current track, and the play status also defaults to false.  At this point, each individual track's play button will trigger a change in the play status, as well as the current track (however, clicking on a track will not change the current track state if the track is already the current one).  Once a track starts playing (the play status has changed to true), the play status does not change if other tracks are played subsequently, i.e. the play status continues to be true as you click on different tracks. Only when you click on a track twice in a row does the play status render false.  Below is a snippet of the logic described above. 
 
 ```javascript
   playMusic(){
@@ -58,6 +60,33 @@ Two things need to exist in the state shape in order for streaming music to work
     }
   }
 ```
+
+The CSS used for play and pause also relied on these two state attributes.  If the play status is true, and the track matches the current track name, then a pause circle is rendered for that particular track; otherwise, a play button renders as the default button.
+
+```javascript
+render () {
+    if (this.props.playStatus === true && this.props.currentTrack.audio_file_name ===this.props.track.audio_file_name){
+      return (
+        <li>
+          <div className='song-titles' >
+            <i onClick={this.playMusic} className="fa fa-pause-circle"></i>
+            {this.props.track.title}
+          </div>
+        </li>
+      );
+    } else{
+      return (
+        <li>
+          <div className='song-titles' >
+            <i onClick={this.playMusic} className="fa fa-play-circle"></i>
+            {this.props.track.title}
+          </div>
+        </li>
+      );
+    }
+
+```
+
 
 ### Comments
 
