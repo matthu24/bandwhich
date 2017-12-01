@@ -6,8 +6,11 @@ class SongPlayer extends React.Component {
   constructor(props){
     super(props);
     // this.state = {playing: true};
-    this.state = {progress:0};
-    this.player = null;
+    this.state = {duration:0};
+    this.getDuration= this.getDuration.bind(this);
+    this.getSeek = this.getSeek.bind(this);
+    this.formatTime=this.formatTime.bind(this);
+    // this.player = null;
     this.handlePause = this.handlePause.bind(this);
   }
 
@@ -23,33 +26,33 @@ class SongPlayer extends React.Component {
 //progress bar
 //<input type="range">
 //set interval every 500 ms to get position
+handleOnLoad() {
+let duration = Math.floor(this.player.duration);
+this.setState({duration: this.player.duration()});
+}
 
   getDuration () {
-    this.player.duration();
+    return this.player.duration();
   }
 
   //get the position of playback
   getSeek () {
-    this.player.seek();
+    return this.player.seek();
   }
 
   //set the position of playback
   setSeek () {
-    this.player.seek(0.5);
+    return this.player.seek(0.5);
   }
 
+  formatTime(seconds) {
+  let minutes = Math.floor(seconds / 60);
+  seconds = Math.floor(seconds % 60);
+
+  return (minutes < 10 ? `0${minutes}` : minutes) + ':' + (seconds < 10 ? `0${seconds}` : seconds);
+}
+
   render () {
-    let howler;
-    howler = (
-      <ReactHowler
-        ref={(ref) => (this.player = ref)}
-        src={[audioFileName]}
-        playing={this.props.playing}
-
-      />
-    );
-
-
 
     const audioFileName = this.props.audio;
 
@@ -59,10 +62,14 @@ class SongPlayer extends React.Component {
     return (
       <div>
         <ReactHowler
+          preload='true'
           ref={(ref) => (this.player=ref)}
+          onLoad={this.handleOnLoad}
           src={[audioFileName]}
           playing={this.props.playing}
         />
+
+      <div>{this.formatTime(this.state.duration)}</div>
 
     </div>
   );

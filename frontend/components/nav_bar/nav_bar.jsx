@@ -18,13 +18,14 @@ class NavBar extends React.Component {
     const navContent = this.props.currentUser ? (
       <div>
         <div>Hi {this.props.currentUser.username}</div>
-        <div><a href="#" onClick={this.props.logout}>log out</a></div>
+        <Link to='/artists'>Discover</Link>
+        <div><a href="#" onClick={this.props.logout}>Log Out</a></div>
       </div>
     ) : (
       <div>
-        <Link to='/login'>log in</Link>
-        <Link to='/signup'>sign up</Link>
-        <Link to='/guest'>demo login</Link>
+        <Link to='/login'>Log In</Link>
+        <Link to='/signup'>Sign Up</Link>
+        <Link to='/guest'>Demo Login</Link>
       </div>
     );
     return (
