@@ -18,10 +18,10 @@ u1 = User.create!(username: "Guest", password: "password")
 #bio_rand = rand(1) + 1
 #bio: faker::Hipster.paragraph(bio_rand)
 a1 = Artist.create!(name: "Matthew Hu", genre: "Inspired by the likes of Tchaikovsky and good coffee.  From Seattle, WA.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MatthewHuProfile.png" )
-a2 = Artist.create!(name: "Harry Liu", genre: "Singer-songwriter from Bay Area, CA. Vibes. Grooves. Jams. Let's go.  These tracks are the culmination of a couple years of work, smiles and laughter from friends from all places.", image_file_name:"https://s3-us-west-1.amazonaws.com/fullstackfiles/HarryLiuProfile.png")
-a3 = Artist.create!(name: "Melody Hwang", genre: "Melody Hwang's debut album featuring powerfully expressive songs in a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MelodyHwangProfile.png" )
+a2 = Artist.create!(name: "Harry Liu", genre: "These tracks are the culmination of a couple years of work, smiles and laughter from friends from all places.", image_file_name:"https://s3-us-west-1.amazonaws.com/fullstackfiles/HarryLiuProfile.png")
+a3 = Artist.create!(name: "Melody Hwang", genre: "Melody Hwang's debut album featuring a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MelodyHwangProfile.png" )
 a4 = Artist.create!(name: "Edan Lewis", genre: "I made these songs, while working at a hotel in Aomori, Japan; from the confines of room 404.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/EdanLewisProfile.png")
-a5 = Artist.create!(name: "Zach Bolen", genre: "Joining the ranks of the BadChristian roster, Zach Bolen's 1001 is a delightful and surprising rock album that strays from the Citizens & Saints sound in more ways than one. ", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/ZachBolenProfile.png")
+a5 = Artist.create!(name: "Zach Bolen", genre: "Zach Bolen's 1001 is a delightful and surprising rock album that strays from the Citizens & Saints sound.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/ZachBolenProfile.png")
 a6 = Artist.create!(name: "Linus", genre: "The best friend of Charlie Brown, and the proud co-author of Paper Dream.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream4.png" )
 
 # :artist_id,:title,:year,:image_file_name
