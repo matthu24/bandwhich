@@ -31,6 +31,9 @@ class ArtistShow extends React.Component {
   componentWillUnmount(){
     this.props.clearArtists();
     this.props.clearCurrentTrack();
+    if (this.props.playStatus === true) {
+      this.playMusic();
+    }
   }
 
   playMusic(){

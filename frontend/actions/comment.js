@@ -18,6 +18,7 @@ const removeComment = comment => ({
   comment
 });
 
+//action creator takes artistId as an argument
 export const fetchAllComments = artistId => dispatch => {
   return fetchArtistComments(artistId).then(comments => dispatch(receiveComments(comments)));
 };
