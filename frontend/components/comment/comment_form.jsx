@@ -65,7 +65,7 @@ class CommentForm extends React.Component {
           </ul>
         </div>
 
-        <div className="leave-comment">Leave a comment:</div>
+        <div className="leave-comment">Leave a review:</div>
         <br></br>
         <form onSubmit={this.handleSubmit}>
           <label>

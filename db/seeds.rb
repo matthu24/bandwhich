@@ -19,10 +19,13 @@ u1 = User.create!(username: "Guest", password: "password")
 #bio: faker::Hipster.paragraph(bio_rand)
 a1 = Artist.create!(name: "Matthew Hu", genre: "Inspired by the likes of Tchaikovsky and good coffee.  From Seattle, WA.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MatthewHuProfile.png" )
 a2 = Artist.create!(name: "Harry Liu", genre: "These tracks are the culmination of a couple years of work, smiles and laughter from friends from all places.", image_file_name:"https://s3-us-west-1.amazonaws.com/fullstackfiles/HarryLiuProfile.png")
-a3 = Artist.create!(name: "Melody Hwang", genre: "Melody Hwang's debut album featuring a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MelodyHwangProfile.png" )
+a3 = Artist.create!(name: "Melody Hwang", genre: "Melody Hwang's debut album featuring a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MelodyProfile2.png" )
 a4 = Artist.create!(name: "Edan Lewis", genre: "I made these songs, while working at a hotel in Aomori, Japan; from the confines of room 404.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/EdanLewisProfile.png")
 a5 = Artist.create!(name: "Zach Bolen", genre: "Zach Bolen's 1001 is a delightful and surprising rock album that strays from the Citizens & Saints sound.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/ZachBolenProfile.png")
 a6 = Artist.create!(name: "Linus", genre: "The best friend of Charlie Brown, and the proud co-author of Paper Dream.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream4.png" )
+a7 = Artist.create!(name: "Surfer-jan", genre: "Sufjan Stevens (born July 1, 1975) is an American singer-songwriter and multi-instrumentalist.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Sufjan.png" )
+a8 = Artist.create!(name: "Sfjn", genre: "Stevens has released albums of varying styles, from the electronica of Enjoy Your Rabbit to the symphony Illinois.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Sufjan2.png" )
+
 
 # :artist_id,:title,:year,:image_file_name
 al1 = Album.create!(artist_id: a1.id, title: "Paper Dream", year: 2017, image_file_name:"https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream.png" )
@@ -31,6 +34,8 @@ al3 = Album.create!(artist_id: a3.id, title: "Suddenly", year: 2015, image_file_
 al4 = Album.create!(artist_id: a4.id, title: "The 404 Sessions", year: 2015, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/404Session.png" )
 al5 = Album.create!(artist_id: a5.id, title: "1001", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/1001Album.png" )
 al6 = Album.create!(artist_id: a6.id, title: "Christmas Single", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Chrismtas.png" )
+al7 = Album.create!(artist_id: a7.id, title: "Illinoisy", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/IllinoiseAlbum.png" )
+al8 = Album.create!(artist_id: a8.id, title: "Detroit", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/DetroitAlbum.png" )
 
 
 s1 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Prelude" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/01_Prelude%2Bmastering_1_variant.wav" )
@@ -73,4 +78,26 @@ s33 = Track.create!(artist_id: a4.id , album_id: al4.id , title: "Shinjuku Stati
 s34 = Track.create!(artist_id: a4.id , album_id: al4.id , title: "Sing-a-pore" , track_num: 7 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/07-Sing-a-pore.mp3" )
 
 s36 = Track.create!(artist_id: a5.id , album_id: al5.id , title: "I want to Die" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+I+Want+To+Die.mp3" )
+
 s37 = Track.create!(artist_id: a6.id , album_id: al6.id , title: "What Child Is This" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/What+Child+Is.mp3" )
+
+s38 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Weight" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/01+Weight.mp3" )
+s39 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Paper Clouds" , track_num: 2 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/07+Paper+Clouds.mp3" )
+s40 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Can't You See" , track_num: 3 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+Can't+You+See.mp3" )
+s41 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Ninth Street" , track_num: 4 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/04+Ninth+Street.mp3" )
+s42 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Do I Know Me" , track_num: 5 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/05+Do+I+Know+Me.mp3" )
+s43 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Comfort" , track_num: 6 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/06+Comfort.mp3" )
+s44 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Bread and Butter" , track_num: 7 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/07+Bread+and+Butter+(acoustic).mp3" )
+s45 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Love Ray" , track_num: 8 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/08+Love+Ray+ft.+Wei+Yan.mp3" )
+s46 = Track.create!(artist_id: a7.id , album_id: al7.id , title: "Hello Friend" , track_num: 9 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/09+Hello+Friend.mp3" )
+
+
+s47 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Weight" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/01+Weight.mp3" )
+s48 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Paper Clouds" , track_num: 2 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/08+Paper+Clouds.mp3" )
+s49 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Can't You See" , track_num: 3 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+Can't+You+See.mp3" )
+s50 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Ninth Street" , track_num: 4 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/04+Ninth+Street.mp3" )
+s51 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Do I Know Me" , track_num: 5 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/05+Do+I+Know+Me.mp3" )
+s52 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Comfort" , track_num: 6 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/06+Comfort.mp3" )
+s53 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Bread and Butter" , track_num: 7 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/08+Bread+and+Butter+(acoustic).mp3" )
+s45 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Love Ray" , track_num: 8 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/08+Love+Ray+ft.+Wei+Yan.mp3" )
+s46 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Hello Friend" , track_num: 9 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/09+Hello+Friend.mp3" )

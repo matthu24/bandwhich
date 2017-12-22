@@ -4,7 +4,7 @@ export default () => (
   <div className="welcome">
 
     <div className = "slogan">Discover amazing new music and directly support the artists who make it.</div>
-    <img className='splash-image' src= "https://i.imgur.com/gnamAvV.jpg"/>
+    <img className='splash-image' src= "https://s3-us-west-1.amazonaws.com/fullstackfiles/SplashPage.png"/>
   </div>
 );
 

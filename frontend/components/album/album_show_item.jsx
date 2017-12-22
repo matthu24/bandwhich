@@ -9,7 +9,7 @@ const AlbumShowItem = props => {
       <div >
         <h2>{props.album.title}</h2>
           <p>by {props.artist.name}</p>
-          <p className="bandwhich-text">Includes unlimited streaming via the free Bandwhich app, plus high-quality download in MP3, FLAC and more.</p>
+          <p className="bandwhich-text">Includes unlimited streaming via the free Bandwhich app, plus reviews from users like you.</p>
         <img className='album-image' src= {albumImage}/>
       </div>
 

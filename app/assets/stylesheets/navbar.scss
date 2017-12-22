@@ -10,7 +10,7 @@
 
 .nav-bar div{
   /*background-color: lightgray;*/
-  background-color: white;
+  // background-color: white;
   display: flex;
   /*justify-content: space-between;*/
   align-items: center;
@@ -52,15 +52,19 @@
 .right-nav {
   display: flex;
   // flex-direction: column;
-  justify-content: space-between;
-  margin: 10px;
+  justify-content: space-around;
+  margin: -50px;
   float:right;
   font-weight: bold;
   flex: 0 0 auto;
 }
 
+.right-nav div{
+  margin: 10px;
+}
+
 .nav-bar {
-  height: 90px;
+  height: 80px;
   display: flex;
   justify-content: space-around;
   font-size: 14px;
