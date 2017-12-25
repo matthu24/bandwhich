@@ -80,7 +80,7 @@ class ArtistShow extends React.Component {
             </div>
 
               <p className = "footnote1"> Digital Album</p>
-              <p className = "footnote2">Streaming + Download</p>
+              <p className = "footnote2">Unlimited Streaming</p>
               {Object.values(tracks).map((track,idx) => <TrackShowContainer key={idx} track={track}/>)}
           </ol>
 
