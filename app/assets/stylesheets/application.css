@@ -46,3 +46,19 @@ li{
 .main-play-icon i{
   font-size: 27px;
 }
+
+
+body::after{
+  content: "";
+  /*// background: url(image.jpg);*/
+  background: url("https://s3.us-east-2.amazonaws.com/octagonchallenge/Screen+Shot+2018-01-16+at+7.18.34+PM.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*opacity: 0.3;*/
+  top: 0;
+  left: 0;
+  bottom: -330px;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}

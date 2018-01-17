@@ -3,7 +3,7 @@ class Api::AlbumsController < ApplicationController
     @albums = Album.all
   end
 
-  def create
+  def create 
     @album = Album.new(album_params)
     if @album.save!
       render 'api/albums/show'
