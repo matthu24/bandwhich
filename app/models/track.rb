@@ -10,7 +10,7 @@ class Track < ApplicationRecord
     param = param.join('%');
     #add % to beginning and end
     param = '%' + param + '%';
-    #active record qury
+    #active record qury: search tracks where title(lowercase) is like param and limit to 5 results
     Track.where('lower(title) LIKE ?', param).limit(5)
 
   end
