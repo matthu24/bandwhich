@@ -26,6 +26,8 @@ class ArtistIndex extends React.Component {
 
     return(
       <div className = "spotlight-container">
+        <div className = "slogan">Discover.  Listen.  Discuss.  A space to engage with the musical community around you.</div>
+
         <div className = "spotlight">
           <div className="artist1">
             <Link className = 'artist-name' to={`/artists/${artist1.id}`}>
