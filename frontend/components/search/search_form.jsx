@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class SearchForm extends React.Component{
   constructor(props){
@@ -23,7 +25,9 @@ class SearchForm extends React.Component{
 
       <div>
         <form onSubmit={this.handleSubmit} className='search-container' >
-          <input onChange={this.handleChange} id='search-form' className='search-form' type='text' placeholder='Search an artist, album, or song'/>
+          <Link to='/search'>
+            <input onChange={this.handleChange} id='search-form' className='search-form' type='text' placeholder='Search an artist, album, or song'/>
+          </Link>
         </form>
       </div>
     )
