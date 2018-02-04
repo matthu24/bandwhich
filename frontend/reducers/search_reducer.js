@@ -1,4 +1,6 @@
 import { RECEIVE_SEARCH_RESULTS } from '../actions/search';
+import merge from 'lodash/merge';
+
 
 export default (search = {}, action) => {
   Object.freeze(search);

@@ -15,6 +15,7 @@ class SearchForm extends React.Component{
 
   handleChange(e){
     this.setState({search:e.target.value})
+    this.props.fetchSearchResults(this.state.search);
   }
 
   render(){
