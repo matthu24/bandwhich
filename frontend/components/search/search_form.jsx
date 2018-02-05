@@ -16,6 +16,8 @@ class SearchForm extends React.Component{
   }
 
   handleChange(e){
+    e.preventDefault();
+
     this.setState({search:e.target.value})
     this.props.fetchSearchResults(this.state.search);
   }
@@ -23,12 +25,19 @@ class SearchForm extends React.Component{
   render(){
     return(
 
-      <div>
+      <div className='search-bundle'>
         <form onSubmit={this.handleSubmit} className='search-container' >
           <Link to='/search'>
-            <input onChange={this.handleChange} id='search-form' className='search-form' type='text' placeholder='Search an artist, album, or song'/>
-          </Link>
+            <input value={this.state.search} onChange={this.handleChange} id='search-form' className='search-form' type='text' autocomplete='off' placeholder='Search an artist, album, or song'/>
+
+        </Link>
         </form>
+        <ul className='suggestions'>
+          <li>hello?</li>
+          <li>hello2</li>
+          <li>hey</li>
+          <li>hi</li>
+        </ul>
       </div>
     )
   }
