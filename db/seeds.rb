@@ -30,7 +30,7 @@ a8 = Artist.create!(name: "Sfjn", genre: "Stevens has released albums of varying
 
 
 # :artist_id,:title,:year,:image_file_name
-al1 = Album.create!(artist_id: a1.id, title: "Paper Dream", year: 2017, image_file_name:"https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream.png" )
+al1 = Album.create!(artist_id: a1.id, title: "Paper Dream", year: 2017, image_file_name:"https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream2.png" )
 al2 = Album.create!(artist_id: a2.id, title: "Ninth Street", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/NinthStreet.png")
 al3 = Album.create!(artist_id: a3.id, title: "Suddenly", year: 2015, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Suddenly.png" )
 al4 = Album.create!(artist_id: a4.id, title: "The 404 Sessions", year: 2015, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/404Session.png" )
