@@ -11,6 +11,7 @@ class SearchIndex extends React.Component{
       return null;
     }
     return(
+      <div>
       <div className="search">
         <ul className='search-list'>
         {
@@ -19,6 +20,7 @@ class SearchIndex extends React.Component{
           )
         }
         </ul>
+      </div>
       </div>
     )
   }
