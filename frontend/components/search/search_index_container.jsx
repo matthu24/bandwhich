@@ -4,7 +4,8 @@ import SearchIndex from './search_index';
 
 //search_results is an array of search item objects
 const mapStateToProps = state => ({
-  search_results: state.entities.searches.searchResults
+  search_results: state.entities.searches.searchResults,
+  artists: Object.values(state.entities.artists)
 });
 
 

@@ -12,10 +12,10 @@ class SearchIndex extends React.Component{
     }
     return(
       <div className="search">
-        <ul>
+        <ul className='search-list'>
         {
-          this.props.search_results.map(result =>
-            <SearchIndexItem result={result}/>
+          this.props.search_results.map((result,idx) =>
+            <SearchIndexItem artists={this.props.artists} key={idx} result={result}/>
           )
         }
         </ul>
