@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchIndexItem from './search_index_item';
 
 class SearchIndex extends React.Component{
   constructor(props){
@@ -11,9 +12,13 @@ class SearchIndex extends React.Component{
     }
     return(
       <div className="search">
+        <ul>
         {
-          this.props.search_results.map(result => <li>{result.type}</li>)
+          this.props.search_results.map(result =>
+            <SearchIndexItem result={result}/>
+          )
         }
+        </ul>
       </div>
     )
   }

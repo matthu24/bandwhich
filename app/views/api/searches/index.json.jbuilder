@@ -1,6 +1,6 @@
 json.searchResults do
     json.array! @artists.each do |artist|
-      json.set! :type, 'band'
+      json.set! :type, 'artist'
       json.partial! 'api/artists/artist', artist: artist
     end
 
