@@ -51,18 +51,20 @@
 }
 
 .suggestions {
-  margin-top: 38px;
+  margin-top: 37px;
+  margin-left: 8px;
   padding: 0;
   position: absolute;
   /*perspective:20px;*/
 }
 .suggestions li {
   background:white;
+  width: 187px;
   list-style: none;
   border-bottom: 1px solid #D8D8D8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
   margin:0;
-  // padding:20px;
+  padding:10px;
   transition:background 0.2s;
   display:flex;
   justify-content:space-between;

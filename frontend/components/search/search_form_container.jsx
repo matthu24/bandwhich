@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import {fetchSearchResults} from '../../actions/search';
 
 const mapStateToProps = state => ({
+  searchResults: state.entities.searches.searchResults
 
 });
 
@@ -13,7 +14,10 @@ const mapDispatchToProps = dispatch => ({
 
 
 
-export default withRouter(connect(
+
+
+
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchForm));
+)(SearchForm);
