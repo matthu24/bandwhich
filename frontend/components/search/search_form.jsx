@@ -20,31 +20,10 @@ class SearchForm extends React.Component{
 
   }
 
-  //we don't need all the bullshit in handleChange
   handleChange(e){
     e.preventDefault();
     this.setState({search:e.target.value})
-    // const query = Object.assign({}, this.state)
     this.props.fetchSearchResults(this.state.search);
-    // let suggestions = document.querySelector('.suggestions');
-    //
-    // if(!this.props.searchResults) return null;
-    // let html = this.props.searchResults.slice(0,3).map(result => {
-    //   let id = result.name ? result.id : result.artist_id
-    //   let name = result.name ? result.name : result.title;
-    //   let url= "/artists";
-    //   return `
-    //
-    //     <li>
-    //             <Link to="${url}">
-    //       <span>${name}</span>
-    //       <span>${result.type}</span>
-    //         </Link>
-    //     </li>
-    //
-    //   `
-    // }).join('')
-    // suggestions.innerHTML = html;
   }
 
   //instead of rendering the empty ul right here, just render anotehr component called suggestions
@@ -58,9 +37,8 @@ class SearchForm extends React.Component{
         <form onSubmit={this.handleSubmit} className='search-container' >
           <Link to='/search'>
             <input value={this.state.search} onChange={this.handleChange} id='search-form' className='search-form' type='text' autoComplete='off' placeholder='Search an artist, album, or song'/>
-        </Link>
+          </Link>
         </form>
-        <Dropdown results={this.props.searchResults}/>
       </div>
     )
   }

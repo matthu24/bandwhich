@@ -1,32 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-// const Dropdown = props => {
-//   if(!props.results) return null;
-//   return(
-//
-//     <div>
-//       <ul>
-//         {
-//           props.results.slice(0,3).map(result => {
-//             <li>
-//               {result.type}
-//             </li>
-//           })
-//         }
-//       </ul>
-//     </div>
-//   )
-// }
-//
-// export default Dropdown;
-
-
-
 
 class Dropdown extends React.Component {
-
-
   render () {
     if(!this.props.results) return null;
 
