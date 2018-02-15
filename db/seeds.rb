@@ -22,7 +22,7 @@ a2 = Artist.create!(name: "Harry Liu", genre: "These tracks are the culmination 
 a5 = Artist.create!(name: "Zach Bolen", genre: "Zach Bolen's 1001 is a delightful and surprising rock album that strays from the Citizens & Saints sound.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/ZachBolenProfile.png")
 a4 = Artist.create!(name: "Edan Lewis", genre: "I made these songs, while working at a hotel in Aomori, Japan; from the confines of room 404.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/EdanLewisProfile.png")
 
-a3 = Artist.create!(name: "Melody Hwang", genre: "Melody Hwang's debut album featuring a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MelodyProfile2.png" )
+a3 = Artist.create!(name: "Melody Hwang", genre: "Melody Hwang's debut album featuring a unique blend of modern electronic pop and traditional orchestral tones", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/MelodyHwang2.png" )
 
 a6 = Artist.create!(name: "Linus", genre: "The best friend of Charlie Brown, and the proud co-author of Paper Dream.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream4.png" )
 a7 = Artist.create!(name: "Surfer-jan", genre: "Sufjan Stevens (born July 1, 1975) is an American singer-songwriter and multi-instrumentalist.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Sufjan.png" )
