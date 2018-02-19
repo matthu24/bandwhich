@@ -18,7 +18,7 @@ class NavBar extends React.Component {
   }
 
   render(){
-    const navContent = this.props.currentUser ? (
+    const rightContent = this.props.currentUser ? (
       <div>
         <SearchContainer/>
         <div>Hi {this.props.currentUser.username}</div>
@@ -32,12 +32,23 @@ class NavBar extends React.Component {
         <Link to='/guest'>Demo Login</Link>
       </div>
     );
+
+    const leftContent = this.props.currentUser ? (
+      <div>
+        <Link to='/artists'><img className='logo' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/BandwhichLogo.png"/></Link>
+      </div>
+    ) : (
+      <div>
+        <img className='logo' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/BandwhichLogo.png"/>
+      </div>
+    );
+
     return (
       <header className="nav-bar">
         <div className="left-nav">
-          <Link to='/artists'><img className='logo' src="https://s3-us-west-1.amazonaws.com/fullstackfiles/BandwhichLogo.png"/></Link>
+          {leftContent}
         </div>
-        <div className="right-nav">  {navContent}</div>
+        <div className="right-nav">  {rightContent}</div>
       </header>
     );
   }
