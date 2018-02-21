@@ -27,6 +27,11 @@ a3 = Artist.create!(name: "Melody Hwang", genre: "Melody Hwang's debut album fea
 a6 = Artist.create!(name: "Linus", genre: "The best friend of Charlie Brown, and the proud co-author of Paper Dream.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/PaperDream4.png" )
 a7 = Artist.create!(name: "Surfer-jan", genre: "Sufjan Stevens (born July 1, 1975) is an American singer-songwriter and multi-instrumentalist.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Sufjan.png" )
 a8 = Artist.create!(name: "Sfjn", genre: "Stevens has released albums of varying styles, from the electronica of Enjoy Your Rabbit to the symphony Illinois.", image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Sufjan2.png" )
+a9 = Artist.create!(name: "Foo", genre: "The release of 2017’s Providence was important for Norfolk, England electronic music artist Nathan Foo.", image_file_name: "https://s3.us-east-2.amazonaws.com/personalwebsite1/Artist9.png")
+a10 = Artist.create!(name: "Nirvana Redux", genre: "In 2011 Nirvana Redux, who were at the time essentially just Will Toledo, released an album called Twin Fantasy", image_file_name: "https://s3.us-east-2.amazonaws.com/personalwebsite1/Artist10.png")
+a11= Artist.create!(name: "Boo Radley", genre: "Steve Moore and Daniel O’Sullivan have only released a handful of Miracle records over the past seven years.", image_file_name: "https://s3.us-east-2.amazonaws.com/personalwebsite1/Artist11.png")
+a12 = Artist.create!(name: "A Dell", genre: "Though A Dell uses the tag “noise” to shorthand their history, Posh Isolation has never sat comfortably within that genre", image_file_name: "https://s3.us-east-2.amazonaws.com/personalwebsite1/Artist12.png")
+
 
 
 # :artist_id,:title,:year,:image_file_name
@@ -38,6 +43,10 @@ al5 = Album.create!(artist_id: a5.id, title: "1001", year: 2017, image_file_name
 al6 = Album.create!(artist_id: a6.id, title: "Christmas Single", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/Chrismtas.png" )
 al7 = Album.create!(artist_id: a7.id, title: "Illinoisy", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/IllinoiseAlbum.png" )
 al8 = Album.create!(artist_id: a8.id, title: "Detroit", year: 2017, image_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/DetroitAlbum.png" )
+al9 = Album.create!(artist_id: a9.id, title: "Providence", year: 2017, image_file_name: "https://s3.us-east-2.amazonaws.com/personalwebsite1/GenericAlbum.png" )
+al10 = Album.create!(artist_id: a10.id, title: "Twin Fantasy", year: 2017, image_file_name: "https://s3.us-east-2.amazonaws.com/personalwebsite1/GenericAlbum.png" )
+al11 = Album.create!(artist_id: a11.id, title: "Towers", year: 2017, image_file_name: "https://s3.us-east-2.amazonaws.com/personalwebsite1/GenericAlbum.png" )
+al12 = Album.create!(artist_id: a12.id, title: "Computer History", year: 2017, image_file_name: "https://s3.us-east-2.amazonaws.com/personalwebsite1/GenericAlbum.png" )
 
 
 s1 = Track.create!(artist_id: a1.id , album_id: al1.id , title: "Prelude" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/01_Prelude%2Bmastering_1_variant.wav" )
@@ -103,3 +112,8 @@ s52 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Comfort" , tra
 s53 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Bread and Butter" , track_num: 7 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/08+Bread+and+Butter+(acoustic).mp3" )
 s45 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Love Ray" , track_num: 8 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/08+Love+Ray+ft.+Wei+Yan.mp3" )
 s46 = Track.create!(artist_id: a8.id , album_id: al8.id , title: "Hello Friend" , track_num: 9 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/09+Hello+Friend.mp3" )
+
+s47 = Track.create!(artist_id: a9.id , album_id: al9.id , title: "I want to Die" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+I+Want+To+Die.mp3" )
+s48 = Track.create!(artist_id: a10.id , album_id: al10.id , title: "I want to Die" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+I+Want+To+Die.mp3" )
+s49 = Track.create!(artist_id: a11.id , album_id: al11.id , title: "I want to Die" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+I+Want+To+Die.mp3" )
+s50 = Track.create!(artist_id: a12.id , album_id: al12.id , title: "I want to Die" , track_num: 1 , audio_file_name: "https://s3-us-west-1.amazonaws.com/fullstackfiles/03+I+Want+To+Die.mp3" )
